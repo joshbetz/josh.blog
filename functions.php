@@ -19,6 +19,33 @@ add_action( 'after_setup_theme', function() {
 	) );
 });
 
+add_action( 'customize_register', function( $wp_customize ) {
+	$wp_customize->add_setting( 'link_color' , array(
+		'default'     => '#4947F9',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'link_color',
+			array(
+				'label'      => __( 'Link Hover Color', 'josh.blog' ),
+				'section'    => 'colors',
+				'settings'   => 'link_color',
+			)
+		)
+	);
+});
+
+add_action( 'wp_head', function() {
+?>
+	<style type="text/css">
+		a:hover { color: <?php echo get_theme_mod( 'link_color', '#4947F9' ); ?>; }
+	</style>
+<?php
+});
+
 add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', array(), '1.0' );
 
