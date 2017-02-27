@@ -1,7 +1,7 @@
 <?php
 
 if ( ! isset( $content_width ) ) {
-	$content_width = 800;
+	$content_width = 600;
 }
 
 add_action( 'after_setup_theme', function() {
