@@ -12,6 +12,10 @@ while ( have_posts() ): the_post();
 		</span>
 	</header>
 
+	<?php if ( has_post_thumbnail() ): ?>
+		<?php the_post_thumbnail(); ?>
+	<?php endif; ?>
+
 	<div class="post-content"><?php the_content(); ?></div>
 </article>
 <?php

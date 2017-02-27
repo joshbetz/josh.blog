@@ -92,6 +92,12 @@ img {
 	height: auto;
 }
 
+.attachment-post-thumbnail  {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
 span.embed-youtube {
 	position: relative;
 	padding-bottom: 56.5%
