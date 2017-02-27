@@ -1,0 +1,213 @@
+/*
+Theme Name: josh.blog
+Author: Josh Betz
+Author URI: https://josh.blog/
+Version: 1.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: josh.blog
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lora:700|Rasa:400,600');
+
+body {
+	font-family: 'Rasa', serif;
+	background: #eee;
+	color: #999;
+	text-align: center;
+}
+
+#page {
+	color: #444;
+	text-align: left;
+	padding: 1rem 2rem;
+	background: white;
+	max-width: 800px;
+	margin: .6rem auto;
+	border: solid 1px #e6e6e6;
+}
+
+
+/* Links */
+a {
+	color: #444;
+	font-weight: bold;
+}
+
+#header a, header a {
+	text-decoration: none;
+}
+
+h1 a {
+	color: #333;
+}
+
+a:hover {
+	color: #111;
+}
+
+.social-navigation ul li {
+	display: inline;
+}
+
+/* Text */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lora', serif;
+}
+
+h4, h5, h6 {
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 1.8em;
+}
+
+.post-content {
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+}
+
+pre {
+	overflow-x: scroll;
+}
+
+img {
+	max-width: 100%;
+	height: 100%;
+}
+
+.nav-previous {
+	text-align: left;
+}
+.nav-next {
+	text-align: right;
+}
+
+
+/* Genericons */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+
+.social-navigation a:before {
+	display: inline-block;
+	font-family: "Genericons";
+	font-size: 16px;
+	text-align: center;
+}
+
+.social-navigation ul {
+	padding: 0;
+	list-style: none;
+	margin: 0 0 -1.6em 0;
+}
+
+.social-navigation a {
+	display: inline-block;
+	height: 3.2em;
+	position: relative;
+	width: 3.2em;
+}
+
+.social-navigation a:before {
+	content: "\f415";
+	font-size: 24px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.social-navigation a[href*="github.com"]:before {
+	content: "\f200";
+}
+
+.social-navigation a[href*="instagram.com"]:before {
+	content: "\f215";
+}
+
+.social-navigation a[href*="reddit.com"]:before {
+	content: "\f222";
+}
+
+.social-navigation a[href*="twitter.com"]:before {
+	content: "\f202";
+}
+
+.social-navigation a[href*="wordpress.com"]:before,
+.social-navigation a[href*="wordpress.org"]:before {
+	content: "\f205";
+}
+
+.social-navigation a[href*="youtube.com"]:before {
+	content: "\f213";
+}
+
+.social-navigation a[href*="mailto:"]:before {
+	content: "\f410";
+}
+
+.social-navigation a[href*="spotify.com"]:before {
+	content: "\f515";
+}
+
+.social-navigation a[href$="/feed/"]:before {
+	content: "\f413";
+}
+
+/* Articles */
+article + article {
+	margin-top: 5rem;
+}
+
+article {
+	margin-bottom: 3rem;
+	margin-top: 2rem;
+}
+
+article header {
+	text-align: center;
+}
+
+#header {
+	padding: 1rem 0;
+}
+
+#header h1, header h1 {
+	margin: 0;
+}
+
+.article-meta {
+	text-transform: uppercase;
+	color: #999;
+	font-size: .8rem;
+}
+
+ul.post-categories {
+	display: inline-block;
+	list-style: none;
+	padding: 0 1em;
+}
+
+ul.post-categories li {
+	display: inline;
+}
+
+.post-categories li:not(:last-child):after {
+	content: "\00b7";
+	padding: 5px;
+}
+
+/* Images */
+.alignleft {
+	float: left;
+	padding: 1rem;
+}
+
+.alignright {
+	float: right;
+	padding: 1rem;
+}
