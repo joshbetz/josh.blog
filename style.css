@@ -34,16 +34,16 @@ a {
 	font-weight: bold;
 }
 
+a:hover {
+	color: #4947F9;
+}
+
 #header a, header a {
 	text-decoration: none;
 }
 
 h1 a {
 	color: #333;
-}
-
-a:hover {
-	color: #111;
 }
 
 .social-navigation ul li {
