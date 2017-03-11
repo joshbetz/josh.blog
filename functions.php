@@ -9,13 +9,23 @@ add_action( 'after_setup_theme', function() {
 		'social'  => __( 'Social Links Menu', 'twentyfifteen' ),
 	));
 
+	// Add support for Post Thumbnails
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( '600', '400' );
 
+	// Let WordPress manage the document title
 	add_theme_support( 'title-tag' );
+
+	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+
+	// Switch some default markup to html5
 	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
 	) );
 });
 
