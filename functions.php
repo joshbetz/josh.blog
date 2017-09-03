@@ -4,6 +4,14 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 600;
 }
 
+wp_embed_register_handler( 'spotify', '#https?://(open|play)\.spotify\.com/((\w+)/(\w+))#i', function( $matches, $attr, $url, $rawattr ) {
+	if ( $matches[3] == "track" ) {
+		return sprintf( '<iframe src="https://open.spotify.com/embed/%s" width="100%%" height="80" frameborder="0" allowtransparency="true"></iframe>', $matches[2] );
+	} else {
+		return sprintf( '<iframe src="https://open.spotify.com/embed/%s" width="100%%" height="380" frameborder="0" allowtransparency="true"></iframe>', $matches[2] );
+	}
+});
+
 add_action( 'after_setup_theme', function() {
 	register_nav_menus( array(
 		'social'  => __( 'Social Links Menu', 'twentyfifteen' ),
