@@ -61,7 +61,7 @@ h1 {
 
 .post-content {
 	font-size: 1.2rem;
-	line-height: 1.6rem;
+	line-height: 1.6;
 	overflow: hidden;
 }
 
@@ -231,4 +231,10 @@ ul.post-categories li {
 .alignright {
 	float: right;
 	padding: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+	#page {
+		padding: 1rem;
+	}
 }
