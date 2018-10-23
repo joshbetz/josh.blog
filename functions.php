@@ -65,7 +65,7 @@ add_action( 'wp_head', function() {
 });
 
 add_action( 'wp_enqueue_scripts', function() {
-	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', array(), '1.0' );
+	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', array(), '1.1' );
 
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.2' );
