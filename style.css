@@ -233,6 +233,26 @@ ul.post-categories li {
 	padding: 1rem;
 }
 
+@media (prefers-color-scheme: dark) {
+       body {
+               background: #333;
+       }
+
+       #page {
+               background: #161616;
+               border: solid 1px #111;
+               color: white;
+       }
+
+       h1 a {
+               color: #ddd;
+       }
+
+       a {
+               color: #999;
+       }
+}
+
 @media only screen and (max-width: 600px) {
 	#page {
 		padding: 1rem;
