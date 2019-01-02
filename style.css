@@ -8,8 +8,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: josh.blog
 */
 
-@import url('https://fonts.googleapis.com/css?family=Lora:700|Rasa:400,600');
-
 body {
 	font-family: 'Rasa', serif;
 	background: #eee;
