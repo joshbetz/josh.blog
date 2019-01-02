@@ -1,7 +1,7 @@
 <?php
 
 if ( ! isset( $content_width ) ) {
-	$content_width = 600;
+	$content_width = 700;
 }
 
 wp_embed_register_handler( 'spotify', '#https?://(open|play)\.spotify\.com/((\w+)/(\w+))#i', function( $matches, $attr, $url, $rawattr ) {
@@ -19,7 +19,7 @@ add_action( 'after_setup_theme', function() {
 
 	// Add support for Post Thumbnails
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( '600', '400' );
+	set_post_thumbnail_size( '700', '400' );
 
 	// Let WordPress manage the document title
 	add_theme_support( 'title-tag' );
