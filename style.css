@@ -23,8 +23,23 @@ body {
 	max-width: 700px;
 	margin: .6rem auto;
 	border: solid 1px #e6e6e6;
+	position: relative;
 }
 
+.site-title {
+	font-size: 1.6rem;
+}
+
+.site-description {
+	margin-top: 0;
+	color: #555;
+}
+
+.social-navigation {
+	position: absolute;
+	top: 20px;
+	right: 0;
+}
 
 /* Links */
 a {
@@ -54,7 +69,7 @@ h4, h5, h6 {
 }
 
 h1 {
-	font-size: 1.8em;
+	font-size: 2em;
 }
 
 .post-content {
@@ -69,6 +84,29 @@ pre {
 
 blockquote {
 	font-style: italic;
+}
+
+/* navigation */
+.navigation {
+	padding: 10px 0;
+}
+
+.nav-links {
+	display: flex;
+}
+
+.nav-links a {
+	padding: 10px 15px;
+	border: solid 1px #ddd;
+	font-size: 1.2rem;
+}
+
+.nav-previous, .nav-next {
+	width: 50%;
+}
+
+.nav-next:first-child {
+	width: 100%;
 }
 
 .nav-previous {
@@ -201,8 +239,8 @@ article header {
 
 .article-meta {
 	text-transform: uppercase;
-	color: #999;
-	font-size: .8rem;
+	color: #666;
+	font-size: .9rem;
 }
 
 ul.post-categories {
@@ -254,5 +292,10 @@ ul.post-categories li {
 @media only screen and (max-width: 600px) {
 	#page {
 		padding: 1rem;
+	}
+
+	.social-navigation {
+		position: relative;
+		top: 0;
 	}
 }

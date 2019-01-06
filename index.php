@@ -26,11 +26,17 @@ while ( have_posts() ): the_post();
 			//comments_template();
 		endif;
 	endif;
+
+endwhile;
 ?>
 
-<?php
-endwhile;
-
-posts_nav_link();
+<?php if ( ! is_singular() ): ?>
+<nav class="navigation page-navigation">
+	<div class="nav-links">
+		<div class="nav-previous"><?php previous_posts_link( '&lsaquo; Previous Page' ); ?></div>
+		<div class="nav-next"><?php next_posts_link( 'Next Page &rsaquo;', '' ); ?></div>
+	</div>
+</nav>
+<?php endif;
 
 get_footer();
