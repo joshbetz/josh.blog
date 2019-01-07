@@ -2,7 +2,7 @@
 Theme Name: josh.blog
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 1.5
+Version: 1.5.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: josh.blog
@@ -33,6 +33,7 @@ body {
 .site-description {
 	margin-top: 0;
 	color: #555;
+	font-variant: small-caps;
 }
 
 .social-navigation {
@@ -48,6 +49,7 @@ a {
 }
 
 #header a, header a {
+	font-variant: small-caps;
 	text-decoration: none;
 }
 
@@ -240,7 +242,8 @@ article header {
 .article-meta {
 	text-transform: uppercase;
 	color: #666;
-	font-size: .9rem;
+	font-size: 1rem;
+	font-variant: small-caps;
 }
 
 ul.post-categories {
