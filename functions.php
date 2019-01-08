@@ -66,7 +66,7 @@ add_action( 'wp_head', function() {
 
 add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:700|Rasa:400,600' );
-	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', array( 'google-fonts' ), '1.6' );
+	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', array( 'google-fonts' ), '1.6.1' );
 
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.2' );

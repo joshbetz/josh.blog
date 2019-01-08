@@ -20,7 +20,7 @@ while ( have_posts() ): the_post();
 </article>
 <?php
 	if ( is_singular() ):
-		the_post_navigation( array( 'prev_text' => '&lsaquo; %title', 'next_text' => '%title &rsaquo;' ) );
+		the_post_navigation( array( 'prev_text' => '&lsaquo;&nbsp;%title', 'next_text' => '%title&nbbsp;&rsaquo;' ) );
 
 		if ( comments_open() || get_comments_number() ):
 			//comments_template();
@@ -33,8 +33,8 @@ endwhile;
 <?php if ( ! is_singular() ): ?>
 <nav class="navigation page-navigation">
 	<div class="nav-links">
-		<div class="nav-previous"><?php previous_posts_link( '&lsaquo; Previous Page' ); ?></div>
-		<div class="nav-next"><?php next_posts_link( 'Next Page &rsaquo;', '' ); ?></div>
+		<div class="nav-previous"><?php previous_posts_link( '&lsaquo;&nbsp;Previous Page' ); ?></div>
+		<div class="nav-next"><?php next_posts_link( 'Next Page&nbsp;&rsaquo;', '' ); ?></div>
 	</div>
 </nav>
 <?php endif;
