@@ -20,7 +20,7 @@ while ( have_posts() ): the_post();
 </article>
 <?php
 	if ( is_singular() ):
-		the_post_navigation( array( 'prev_text' => '&lsaquo;&nbsp;%title', 'next_text' => '%title&nbbsp;&rsaquo;' ) );
+		the_post_navigation( array( 'prev_text' => '&lsaquo;&nbsp;%title', 'next_text' => '%title&nbsp;&rsaquo;' ) );
 
 		if ( comments_open() || get_comments_number() ):
 			//comments_template();
