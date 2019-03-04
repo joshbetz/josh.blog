@@ -2,7 +2,7 @@
 Theme Name: josh.blog
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 1.6.2
+Version: 1.6.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: josh.blog
@@ -93,7 +93,7 @@ code {
 	padding: 2px 5px;
 }
 
-code, pre code {
+code, pre {
 	background: #eee;
 	border-radius: 3px;
 }
