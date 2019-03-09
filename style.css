@@ -2,7 +2,7 @@
 Theme Name: josh.blog
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 1.6.3
+Version: 1.6.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: josh.blog
@@ -49,7 +49,6 @@ a {
 }
 
 #header a, header a {
-	text-transform: uppercase;
 	text-decoration: none;
 }
 
@@ -63,7 +62,7 @@ h1 a {
 
 /* Text */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Lato', serif;
+	font-family: 'Cabin', serif;
 }
 
 h4, h5, h6 {
