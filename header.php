@@ -10,7 +10,7 @@
 </head>
 <body <?php body_class(); ?>>
 <section id="page">
-<header>
+<header id="page-header">
 	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 <?php

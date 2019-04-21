@@ -7,8 +7,8 @@ while ( have_posts() ): the_post();
 	<header>
 		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 		<span class="article-meta">
-		<span class="post-date"><?php the_time( get_option( 'date_format' ) ); ?> <a href="<?php the_permalink(); ?>">#</a></span>
-			<?php the_category(); ?>
+		<span class="post-date"><?php the_time( get_option( 'date_format' ) ); ?></span>
+			in <?php the_category(); ?>
 		</span>
 	</header>
 

@@ -2,38 +2,64 @@
 Theme Name: josh.blog
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 1.6.4
+Version: 2.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: josh.blog
 */
 
+:root {
+	--primary-accent-color: #1fc1d3;
+	--secondary-accent-color: #d31f67;
+	--title-color: #111;
+}
+
+/* Layout */
 body {
-	font-family: 'Rasa', serif;
-	background: #eee;
-	color: #999;
-	text-align: center;
+	color: #222;
+	font-family: 'Lato', sans-serif;
 }
 
 #page {
-	color: #444;
-	text-align: left;
-	padding: 1rem 2rem;
-	background: white;
 	max-width: 700px;
-	margin: .6rem auto;
-	border: solid 1px #e6e6e6;
+	margin: 10px auto;
 	position: relative;
+}
+
+#page-header {
+	color: #444;
+	padding: 20px 0;
+}
+
+footer {
+	padding: 10px 0;
+}
+
+/* Headings & Links */
+h1, h2, h3, h4, h5, h6 {
+	color: var(--title-color);
+}
+
+a, a:hover, a:active {
+	color: var(--primary-accent-color);
+}
+
+a:hover {
+	color: var(--secondary-accent-color);
+}
+
+h1 a {
+	color: var(--title-color);
+	text-decoration: none;
 }
 
 .site-title {
 	font-size: 1.6rem;
 }
 
-.site-description {
-	margin-top: 0;
-	color: #555;
-	font-variant: small-caps;
+.site-title, .site-description {
+	margin: 0;
+	padding: 0;
 }
 
 .social-navigation {
@@ -42,41 +68,30 @@ body {
 	right: 0;
 }
 
-/* Links */
-a {
-	color: #444;
-	font-weight: bold;
-}
-
-#header a, header a {
-	text-decoration: none;
-}
-
-h1 a {
-	color: #333;
-}
-
 .social-navigation ul li {
 	display: inline;
 }
 
-/* Text */
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Cabin', serif;
+/* Article */
+article {
+	line-height: 1.5em;
+	font-size: 1.2rem;
 }
 
-h4, h5, h6 {
-	text-transform: uppercase;
+article + article {
+	margin-top: 5rem;
 }
 
-h1 {
-	font-size: 3em;
+article + article:before {
+	content: '\b7\a0\b7\a0\b7\a0';
+	text-align: center;
+	display: block;
+	color: var(--secondary-accent-color);
 }
 
-.post-content {
-	font-size: 1.3rem;
-	line-height: 1.5;
-	overflow: hidden;
+article h1 {
+	font-size: 2rem;
+	margin-bottom: 0;
 }
 
 pre {
@@ -95,6 +110,46 @@ code {
 code, pre {
 	background: #eee;
 	border-radius: 3px;
+}
+
+.article-meta {
+	color: #666;
+	font-size: .9rem;
+	font-style: italic;
+	display: inline-block;
+	margin: 5px 0;
+}
+
+ul.post-categories {
+	display: inline-block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.post-categories li {
+	display: inline;
+}
+
+.post-categories li:not(:last-child):after {
+	content: "\00b7";
+	padding: 5px;
+}
+
+.has-small-font-size {
+	font-size: .8em;
+}
+
+.has-medium-font-size {
+	font-size: 1.2em;
+}
+
+.has-large-font-size {
+	font-size: 1.6em;
+}
+
+.has-huge-font-size {
+	font-size: 2em;
 }
 
 /* navigation */
@@ -127,32 +182,6 @@ code, pre {
 }
 .nav-next {
 	text-align: right;
-}
-
-
-
-/* Responsive elements */
-img {
-	max-width: 100%;
-	height: auto;
-}
-
-.attachment-post-thumbnail  {
-	display: block;
-	margin: 0 auto;
-	text-align: center;
-}
-
-span.embed-youtube {
-	position: relative;
-	padding-bottom: 56.5%
-}
-iframe.youtube-player {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
 }
 
 /* Genericons */
@@ -228,83 +257,6 @@ iframe.youtube-player {
 	content: "\f413";
 }
 
-/* Articles */
-article + article {
-	margin-top: 6rem;
-}
-
-article {
-	margin: 3rem 0;
-}
-
-article header {
-	text-align: center;
-}
-
-#header {
-	padding: 1rem 0;
-}
-
-#header h1, header h1 {
-	margin: 0;
-}
-
-.article-meta {
-	color: #666;
-	font-size: 1rem;
-	font-style: italic;
-	font-variant: small-caps;
-	display: inline-block;
-	margin: 5px 0;
-}
-
-ul.post-categories {
-	display: inline-block;
-	list-style: none;
-	padding-left: 1em;
-	margin: 0;
-}
-
-ul.post-categories li {
-	display: inline;
-}
-
-.post-categories li:not(:last-child):after {
-	content: "\00b7";
-	padding: 5px;
-}
-
-/* Images */
-.alignleft {
-	float: left;
-	padding: 1rem;
-}
-
-.alignright {
-	float: right;
-	padding: 1rem;
-}
-
-@media (prefers-color-scheme: dark) {
-       body {
-               background: #111;
-       }
-
-       #page {
-               background: #222;
-               border: solid 1px #101010;
-               color: white;
-       }
-
-       h1 a {
-               color: #eee;
-       }
-
-       a {
-               color: #666;
-       }
-}
-
 @media only screen and (max-width: 600px) {
 	#page {
 		padding: 1rem;
@@ -313,5 +265,6 @@ ul.post-categories li {
 	.social-navigation {
 		position: relative;
 		top: 0;
+		margin-top: 10px;
 	}
 }
