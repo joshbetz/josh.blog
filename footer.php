@@ -27,6 +27,7 @@
 		<?php endif; ?>
 	</div>
 
+	<?php if ( ! function_exists( ‘is_amp_endpoint’ ) || ! is_amp_endpoint() ): ?>
 	<script>
 		function isTouchDevice() {
 		 return (('ontouchstart' in window)
@@ -49,6 +50,8 @@
 			}
 		}, 100 );
 	</script>
+	<?php endif; ?>
+
 	<?php wp_footer(); ?>
 <body>
 </html>
