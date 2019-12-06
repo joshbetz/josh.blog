@@ -1,44 +1,45 @@
-/*
+/*!
 Theme Name: josh.blog
+Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 2.0.0
+Version: 3.0.0
 License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: josh.blog
 */
 
 :root {
-	--primary-accent-color: #1fc1d3;
-	--secondary-accent-color: #d31f67;
-	--title-color: #111;
+	--primary-accent-color: rgb(80,40,190);
+	--secondary-accent-color: rgb(20,0,110);
 }
 
-/* Layout */
+* { box-sizing: border-box; }
+
+html { font-size: 62.5%; }
+
 body {
-	color: #222;
-	font-family: 'Lato', sans-serif;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 1.5vw;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #222;
+	margin: 0;
 }
 
-#page {
-	max-width: 700px;
-	margin: 10px auto;
-	position: relative;
-}
-
-#page-header {
-	color: #444;
-	padding: 20px 0;
-}
-
-footer {
-	padding: 10px 0;
-}
-
-/* Headings & Links */
 h1, h2, h3, h4, h5, h6 {
-	color: var(--title-color);
+	margin-bottom: 0.5em;
 }
+
+article .content > h1 {
+	margin-top: -0.5rem;
+}
+
+h1 { font-size: 200%; font-weight: 500; }
+h2, .post-content h1 { font-size: 150%; font-weight: 500; }
+h3, .post-content h2 { font-size: 130%; font-weight: 500; }
+h4, .post-content h3 { font-size: 115%; }
+h5, .post-content h4 { font-size: 100%; }
+h6, .post-content h5 { font-size: 100%; font-weight: 500; }
+.post-content h6 { font-size: 90%; }
 
 a, a:hover, a:active {
 	color: var(--primary-accent-color);
@@ -48,223 +49,291 @@ a:hover {
 	color: var(--secondary-accent-color);
 }
 
+#site-navigation a,
+.sidebar a {
+	color: white;
+}
+
 h1 a {
-	color: var(--title-color);
+	text-decoration: none;
+	color: #111;
+}
+
+article h1 a:hover::after,
+article .sidebar a:hover::before {
+	content: "#";
+	font-size: 80%;
+	padding: 0 0.5ch;
+	color: rgba(0,0,0,.5);
+}
+
+#site-navigation a,
+#site-navigation .sidebar a,
+article .sidebar a {
 	text-decoration: none;
 }
 
-.site-title {
-	font-size: 1.6rem;
+article .sidebar a {
+	font-size: 110%;
 }
 
-.site-title, .site-description {
+p {
+  margin-top: 0;
+  line-height: 1.6;
+}
+
+ol, ul {
+	line-height: 1.6;
+}
+
+li {
+	margin: 1rem 0;
+}
+
+#site-navigation li {
 	margin: 0;
-	padding: 0;
-}
-
-.social-navigation {
-	position: absolute;
-	top: 20px;
-	right: 0;
-}
-
-.social-navigation ul li {
-	display: inline;
-}
-
-/* Article */
-article {
-	line-height: 1.5em;
-	font-size: 1.2rem;
-}
-
-article + article {
-	margin-top: 5rem;
-}
-
-article + article:before {
-	content: '\b7\a0\b7\a0\b7\a0';
-	text-align: center;
-	display: block;
-	color: var(--secondary-accent-color);
-}
-
-article h1 {
-	font-size: 2rem;
-	margin-bottom: 0;
-}
-
-pre {
-	overflow-x: scroll;
-	padding: 5px 10px;
 }
 
 blockquote {
-	font-style: italic;
+	border-left: solid 5px rgba(0,0,0,.2);
+	padding-left: 2rem;
+	margin-left: 2rem;
+	font-size: 90%;
 }
 
-code {
-	padding: 2px 5px;
+blockquote cite {
+	display: block;
+	margin-top: 1rem;
+}
+
+address {
+	margin-bottom: 2rem;
 }
 
 code, pre {
-	background: #eee;
+	background: rgba(0,0,0,.1);
 	border-radius: 3px;
 }
 
-.article-meta {
-	color: #666;
-	font-size: .9rem;
-	font-style: italic;
-	display: inline-block;
-	margin: 5px 0;
+pre code {
+	background: none;
 }
 
-ul.post-categories {
-	display: inline-block;
-	list-style: none;
-	padding: 0;
+code {
+	padding: 3px 5px;
+}
+
+pre {
+	padding: 10px;
+	overflow-x: scroll;
+}
+
+table {
+	margin-bottom: 2rem;
+}
+
+th, td {
+	padding: 0.5rem;
+}
+
+th { font-weight: 500; }
+dt { font-weight: 500; }
+dd { font-style: italic; margin-bottom: 1rem; }
+
+figure,
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+section article .content .post-content {
+	max-width: 66ch;
+}
+
+/** Navigation **/
+#site-navigation {
+	background: rgba(0,0,0,.8);
 	margin: 0;
 }
 
-ul.post-categories li {
-	display: inline;
+#site-navigation ul,
+#site-navigation .sidebar {
+	margin: 0;
+	padding: 1rem;
+	line-height: 2;
 }
 
-.post-categories li:not(:last-child):after {
-	content: "\00b7";
-	padding: 5px;
+#site-navigation ul li {
+	display: inline-block;
+	color: white;
+	padding: 0 15px;
 }
 
-.has-small-font-size {
-	font-size: .8em;
+h1.page-title {
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	line-height: 2;
 }
 
-.has-medium-font-size {
-	font-size: 1.2em;
+.post-navigation .screen-reader-text {
+	display: none;
 }
 
-.has-large-font-size {
-	font-size: 1.6em;
+/** Layout **/
+#page {
+	position: relative;
 }
 
-.has-huge-font-size {
-	font-size: 2em;
+#site-navigation {
+	transition: top .2s ease-out;
+	position: fixed;
+	width: 100%;
+	top: -10rem;
+	-webkit-backdrop-filter: blur(2px);
+	backdrop-filter: blur(2px);
 }
 
-/* navigation */
-.navigation {
-	padding: 10px 0;
+#site-navigation.fixed {
+	top: 0rem;
+}
+
+#page-navigation .content {
+	width: 75%;
+	padding: 2rem;
 }
 
 .nav-links {
 	display: flex;
 }
 
-.nav-links a {
-	padding: 10px 15px;
-	border: solid 1px #ddd;
-	font-size: 1.2rem;
-	text-decoration: none;
-	display: inline-block;
+.nav-next {
+	text-align: right;
 }
 
 .nav-previous, .nav-next {
 	width: 50%;
 }
 
-.nav-next:first-child {
-	width: 100%;
-}
-
-.nav-previous {
-	text-align: left;
-}
-.nav-next {
-	text-align: right;
-}
-
-/* Genericons */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	height: 1px;
+#articles {
 	overflow: hidden;
-	position: absolute !important;
-	width: 1px;
 }
 
-.social-navigation a:before {
-	display: inline-block;
-	font-family: "Genericons";
-	font-size: 16px;
-	text-align: center;
+.sidebar {
+	width: 25%;
+	color: white;
+	text-align: right;
+	background: rgba(0,0,0,.5);
+	padding: 2rem;
 }
 
-.social-navigation ul {
-	padding: 0;
+.sidebar-contents ul {
 	list-style: none;
-	margin: 0 0 -1.6em 0;
 }
 
-.social-navigation a {
-	display: inline-block;
-	height: 3.2em;
-	position: relative;
-	width: 3.2em;
+.sidebar-contents li {
+	margin: 0;
+	font-size: 80%;
 }
 
-.social-navigation a:before {
-	content: "\f415";
-	font-size: 24px;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-.social-navigation a[href*="github.com"]:before {
-	content: "\f200";
+article .content {
+	width: 75%;
 }
 
-.social-navigation a[href*="instagram.com"]:before {
-	content: "\f215";
+#page-header,
+#page-header .sidebar {
+	min-height: 40vh;
 }
 
-.social-navigation a[href*="reddit.com"]:before {
-	content: "\f222";
+#page-header .sidebar {
+	padding-top: 6rem;
 }
 
-.social-navigation a[href*="twitter.com"]:before {
-	content: "\f202";
+article, #site-navigation, #page-navigation, #fourohfour {
+	display: flex;
 }
 
-.social-navigation a[href*="wordpress.com"]:before,
-.social-navigation a[href*="wordpress.org"]:before {
-	content: "\f205";
+#fourohfour .content,
+article .content,
+article .sidebar {
+	padding: 2rem;
 }
 
-.social-navigation a[href*="youtube.com"]:before {
-	content: "\f213";
+.wp-block-image {
+	max-width: 100%;
+}
+.alignleft {
+	float: left;
+	padding-right: 2rem;
+}
+.alignright {
+	float: right;
+	padding-left: 2rem;
+}
+.wp-caption-text {
+	font-size: 80%;
+	padding: 1rem;
 }
 
-.social-navigation a[href*="mailto:"]:before {
-	content: "\f410";
+@media only screen and (min-width: 1920px) {
+	body {
+		font-size: 2.8rem
+	}
 }
 
-.social-navigation a[href*="spotify.com"]:before {
-	content: "\f515";
+@media only screen and (max-width: 960px) {
+	body {
+		font-size: 1.6rem
+	}
 }
 
-.social-navigation a[href$="/feed/"]:before {
-	content: "\f413";
-}
-
-@media only screen and (max-width: 600px) {
-	#page {
-		padding: 1rem;
+@media only screen and (max-width: 750px) {
+	section article {
+		font-size: 1.6rem;
+		display: block;
 	}
 
-	.social-navigation {
+	.sidebar {
+		width: 100%;
+		text-align: left;
+	}
+
+	#site-navigation {
+		display: block;
+	}
+
+	#page-navigation .content,
+	article .content {
+		width: 100%;
+	}
+
+	#site-navigation {
 		position: relative;
-		top: 0;
-		margin-top: 10px;
+	}
+
+	#site-navigation ul li {
+		padding-left: 0;
+	}
+
+	#page-header .sidebar {
+		padding-top: 2rem;
+	}
+
+	.categories, .tags {
+		display: none;
+	}
+
+	#page-navigation .sidebar {
+		display: none;
+	}
+
+	.nav-links {
+		display: block;
+	}
+
+	.nav-previous, .nav-next {
+		padding: 1rem 0;
+		width: 100%;
 	}
 }
