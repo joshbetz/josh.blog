@@ -15,6 +15,7 @@ function joshdotblog_get_header_img_url( $url, $width = 4000, $fallback = null )
 
 	return jetpack_photon_url( $url, array(
 		'w' => $width,
+		'zoom' => 2,
 	) );
 }
 
