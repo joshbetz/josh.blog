@@ -310,6 +310,7 @@ article .sidebar {
 
 	#site-navigation {
 		position: relative;
+		top: 0;
 	}
 
 	#site-navigation ul li {
