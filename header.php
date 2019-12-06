@@ -15,15 +15,21 @@
 			background-position: 50% calc(50% + 50px);
 
 			@media only screen and (min-width: 750px) {
-				background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 1000); ?>);
+				#page-header {
+					background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 1000); ?>);
+				}
 			}
 
 			@media only screen and (min-width: 960px) {
-				background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 2000); ?>);
+				#page-header {
+					background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 2000); ?>);
+				}
 			}
 
 			@media only screen and (min-width: 1920px) {
-				background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 4000); ?>);
+				#page-header {
+					background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 4000); ?>);
+				}
 			}
 		}
 	</style>
