@@ -27,7 +27,7 @@
 		<?php endif; ?>
 	</div>
 
-	<?php if ( ! function_exists( ‘is_amp_endpoint’ ) || ! is_amp_endpoint() ): ?>
+	<?php if ( ! function_exists( 'is_amp_endpoint' ) || ! is_amp_endpoint() ): ?>
 	<script>
 		function isTouchDevice() {
 		 return (('ontouchstart' in window)
