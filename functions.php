@@ -26,7 +26,7 @@ add_action( 'after_setup_theme', function() {
 
 	// Add support for Post Thumbnails
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( '4000', '1000' );
+	set_post_thumbnail_size( '8000', '2000' );
 
 	// Let WordPress manage the document title
 	add_theme_support( 'title-tag' );
