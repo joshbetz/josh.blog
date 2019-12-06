@@ -10,13 +10,21 @@
 
 	<style>
 		#page-header {
-			<?php if ( has_post_thumbnail() ): ?>
-			background: url(<?php echo get_the_post_thumbnail_url(); ?>);
-			<?php else: ?>
-			background: url(https://i0.wp.com/josh.blog/wp-content/uploads/sites/4/2014/12/DSC01921.jpg?w=2800);
-			<?php endif; ?>
+			background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 800); ?>);
 			background-size: cover;
 			background-position: 50% calc(50% + 50px);
+
+			@media only screen and (min-width: 750px) {
+				background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 1000); ?>);
+			}
+
+			@media only screen and (min-width: 960px) {
+				background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 2000); ?>);
+			}
+
+			@media only screen and (min-width: 1920px) {
+				background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 4000); ?>);
+			}
 		}
 	</style>
 

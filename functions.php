@@ -1,5 +1,23 @@
 <?php
 
+function joshdotblog_get_header_img_url( $url, $width = 4000, $fallback = null ) {
+	if ( ! $fallback ) {
+		$fallback = 'https://josh.blog/wp-content/uploads/sites/4/2014/12/DSC01921.jpg';
+	}
+
+	if ( ! $url ) {
+		$url = $fallback;
+	}
+
+	if ( ! function_exists( 'jetpack_photon_url' ) ) {
+		return $url;
+	}
+
+	return jetpack_photon_url( $url, array(
+		'w' => $width,
+	) );
+}
+
 add_action( 'after_setup_theme', function() {
 	register_nav_menus( array(
 		'main'  => __( 'Main Site Menu', 'josh.blog' ),
@@ -7,7 +25,7 @@ add_action( 'after_setup_theme', function() {
 
 	// Add support for Post Thumbnails
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( '2000', '500' );
+	set_post_thumbnail_size( '4000', '1000' );
 
 	// Let WordPress manage the document title
 	add_theme_support( 'title-tag' );
