@@ -154,6 +154,7 @@ section article .content .post-content {
 #site-navigation {
 	background: rgba(0,0,0,.8);
 	margin: 0;
+	z-index: 10;
 }
 
 #site-navigation ul,
