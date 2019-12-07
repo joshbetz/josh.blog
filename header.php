@@ -56,7 +56,7 @@
 
 		<div id="page-header">
 			<div class="sidebar">
-				<?php if ( ! is_singular() ): ?>
+				<?php if ( is_home() ): ?>
 				<h2><?php echo get_bloginfo( 'description', 'display' ); ?></h2>
 				<p>👋 I'm Josh</p>
 				<p>I'm a software engineer on the WordPress VIP team at Automattic.</p>
