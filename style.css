@@ -110,7 +110,7 @@ pre code {
 }
 
 code {
-	padding: 3px 5px;
+	padding: 3px 7px;
 	background: #eee;
 	border-radius: 3px;
 }
@@ -118,6 +118,10 @@ code {
 pre {
 	padding: 10px;
 	overflow-x: scroll;
+}
+
+p code {
+	color: #333;
 }
 
 table {
@@ -272,6 +276,12 @@ article .sidebar {
 @media only screen and (min-width: 1920px) {
 	body {
 		font-size: 2.8rem
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	p code {
+		font-size: .9em;
 	}
 }
 
