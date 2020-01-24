@@ -147,7 +147,8 @@ img {
 	height: auto;
 }
 
-section article .content .post-content {
+section article .content .post-content,
+nav .content .post-navigation {
 	max-width: 66ch;
 }
 
