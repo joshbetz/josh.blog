@@ -1,4 +1,4 @@
-/*!
+/*
 Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
@@ -14,15 +14,20 @@ License: GNU General Public License v2 or later
 
 * { box-sizing: border-box; }
 
-html { font-size: 62.5%; }
+html {
+	font-size: 62.5%;
+	min-height: 100%;
+	background: #ccc;
+}
 
 body {
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-size: 1.5vw;
-    line-height: 1.2;
-    font-weight: 400;
-    color: #222;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #222;
 	margin: 0;
+	background: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
