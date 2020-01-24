@@ -12,12 +12,12 @@
 		#page-header {
 			background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 800); ?>);
 			background-size: cover;
-			background-position: 50% calc(50% + 50px);
 		}
 
 		@media only screen and (min-width: 750px) {
 			#page-header {
 				background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 1000); ?>);
+				background-position: 50% calc(50% + 50px);
 			}
 		}
 
