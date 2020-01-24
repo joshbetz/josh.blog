@@ -48,7 +48,7 @@
 				'container'      => false,
 				'theme_location' => 'main',
 				'depth'          => 1,
-				'link_before'    => '<span class="screen-reader-text">',
+				'link_before'    => '<span>',
 				'link_after'     => '</span>',
 			) );
 			?>
