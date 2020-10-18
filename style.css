@@ -56,7 +56,13 @@ a:hover {
 
 #site-navigation a,
 .sidebar a {
+	font-size: 2rem;
+	padding: 1.6rem;
 	color: white;
+}
+
+.comment .sidebar a {
+	padding: 0;
 }
 
 h1 a {
@@ -65,7 +71,9 @@ h1 a {
 }
 
 article h1 a:hover::after,
-article .sidebar a:hover::before {
+article .sidebar a:hover::before,
+.comment-list > .comment > .comment-author a:hover::before,
+.comment .comment .comment-author a:hover::after {
 	content: "#";
 	font-size: 80%;
 	padding: 0 0.5ch;
@@ -74,7 +82,8 @@ article .sidebar a:hover::before {
 
 #site-navigation a,
 #site-navigation .sidebar a,
-article .sidebar a {
+article .sidebar a,
+.comment .comment-author a {
 	text-decoration: none;
 }
 
@@ -148,7 +157,9 @@ img {
 }
 
 section article .content .post-content,
-nav .content .post-navigation {
+nav .content .post-navigation,
+#respond,
+.comment .content {
 	max-width: 66ch;
 }
 
@@ -184,6 +195,44 @@ h1.page-title {
 	display: none;
 }
 
+/** Comments **/
+.comment-list {
+	margin: 0;
+	padding: 0;
+}
+
+.comment {
+	border-top: solid 1px rgba(0,0,0,.3);
+}
+
+.comment .comment {
+	border-top: solid 3px rgba(0,0,0,.1);
+	border-left: solid 3px rgba(0,0,0,.1);
+	margin-top: 2rem;
+	width: 100%;
+}
+
+#respond textarea {
+	display: block;
+	width: 100%;
+	resize: vertical;
+}
+
+#respond textarea,
+#respond input {
+	font-size: 2rem;
+	padding: 1.6rem;
+}
+
+.comment a {
+	font-size: 2rem;
+}
+
+.comment cite a,
+.comment cite {
+	font-size: 3rem;
+}
+
 /** Layout **/
 #page {
 	position: relative;
@@ -202,7 +251,9 @@ h1.page-title {
 	top: 0rem;
 }
 
-#page-navigation .content {
+#comment-title .content,
+.page-navigation .content,
+.comment-footer .content {
 	width: 75%;
 	padding: 2rem;
 }
@@ -240,7 +291,9 @@ h1.page-title {
 	font-size: 80%;
 }
 
-article .content {
+article .content,
+#comment-title .content,
+.comment.depth-1 .content {
 	width: 75%;
 }
 
@@ -253,14 +306,32 @@ article .content {
 	padding-top: 6rem;
 }
 
-article, #site-navigation, #page-navigation, #fourohfour {
+article,
+#site-navigation,
+.page-navigation,
+#fourohfour,
+#comment-title,
+.comment.depth-1,
+.comment-footer {
 	display: flex;
+	flex-flow: row wrap;
 }
 
 #fourohfour .content,
 article .content,
-article .sidebar {
+article .sidebar,
+.comment .content,
+.comment .comment-author {
 	padding: 2rem;
+}
+
+.comment .comment .comment-author {
+	padding-bottom: 0rem;
+}
+
+.comment .comment .content {
+	padding-top: 0rem;
+	width: 100%;
 }
 
 .wp-block-image {
@@ -312,8 +383,10 @@ article .sidebar {
 		display: block;
 	}
 
-	#page-navigation .content,
-	article .content {
+	.page-navigation .content,
+	article .content,
+	.comment.depth-1 .content,
+	.comment-footer .content {
 		width: 100%;
 	}
 
@@ -334,7 +407,7 @@ article .sidebar {
 		display: none;
 	}
 
-	#page-navigation .sidebar {
+	.page-navigation .sidebar {
 		display: none;
 	}
 

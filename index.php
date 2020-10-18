@@ -38,4 +38,46 @@
 	<?php endif; ?>
 </section>
 
+<?php if ( is_single() ): ?>
+	<nav class="page-navigation">
+		<div class="sidebar"></div>
+		<div class="content">
+			<?php
+				the_post_navigation( array(
+					'prev_text' => '&lsaquo;&nbsp;%title',
+					'next_text' => '%title&nbsp;&rsaquo;'
+				) );
+			?>
+		</div>
+	</nav>
+
+	<?php if ( comments_open() || get_comments_number() ):
+		comments_template();
+	?>
+
+	<nav class="page-navigation">
+		<div class="sidebar"></div>
+		<div class="content">
+			<?php
+				the_post_navigation( array(
+					'prev_text' => '&lsaquo;&nbsp;%title',
+					'next_text' => '%title&nbsp;&rsaquo;'
+				) );
+			?>
+		</div>
+	</nav>
+
+	<?php endif; ?>
+<?php endif; ?>
+
+<?php if ( ! is_single() ): ?>
+<nav class="page-navigation">
+	<div class="sidebar"></div>
+	<div class="nav-links content">
+		<div class="nav-previous"><?php previous_posts_link( '&lsaquo;&nbsp;Previous Page' ); ?></div>
+		<div class="nav-next"><?php next_posts_link( 'Next Page&nbsp;&rsaquo;', '' ); ?></div>
+	</div>
+</nav>
+<?php endif; ?>
+
 <?php get_footer(); ?>
