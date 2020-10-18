@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 3.0.8
+Version: 3.1.1
 License: GNU General Public License v2 or later
 */
 
@@ -56,8 +56,6 @@ a:hover {
 
 #site-navigation a,
 .sidebar a {
-	font-size: 2rem;
-	padding: 1.6rem;
 	color: white;
 }
 
@@ -225,12 +223,12 @@ h1.page-title {
 }
 
 .comment a {
-	font-size: 2rem;
+	font-size: 1.6rem;
 }
 
 .comment cite a,
 .comment cite {
-	font-size: 3rem;
+	font-size: 2.2rem;
 }
 
 /** Layout **/
