@@ -14,6 +14,15 @@
 			background-size: cover;
 		}
 
+		#page-header,
+		#page-header a,
+		#page-header .sidebar,
+		#site-navigation,
+		#site-navigation .sidebar a,
+		#site-navigation ul li a {
+			color: #<?php echo get_header_textcolor(); ?>;
+		}
+
 		@media only screen and (min-width: 750px) {
 			#page-header {
 				background-image: url(<?php echo joshdotblog_get_header_img_url( get_the_post_thumbnail_url(), 1000); ?>);

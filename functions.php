@@ -1,10 +1,7 @@
 <?php
 
-function joshdotblog_get_header_img_url( $url, $width = 4000, $fallback = null ) {
-	if ( ! $fallback ) {
-		$fallback = 'https://josh.blog/wp-content/uploads/sites/4/2014/12/DSC01921.jpg';
-	}
-
+function joshdotblog_get_header_img_url( $url, $width = 4000 ) {
+	$fallback = get_header_image();
 	if ( ! $url ) {
 		$url = $fallback;
 	}
@@ -51,9 +48,19 @@ add_action( 'after_setup_theme', function() {
 		'gallery',
 		'caption',
 	) );
+
+
+	add_theme_support( 'custom-header', [
+		'default-image' => 'https://i0.wp.com/josh.blog/wp-content/uploads/sites/4/2014/12/DSC01921.jpg',
+		'default-text-color' => 'fff',
+		'width' => 1500,
+		'height' => 500,
+		'flex-width' => true,
+		'flex-height' => true,
+	] );
 } );
 
 add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,700&display=swap' );
-	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', array( 'google-fonts' ), '3.1.3' );
+	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', array( 'google-fonts' ), '3.1.4' );
 } );
