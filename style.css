@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 3.1.5
+Version: 3.1.6
 License: GNU General Public License v2 or later
 */
 
@@ -22,7 +22,7 @@ html {
 
 body {
 	font-family: 'IBM Plex Sans', sans-serif;
-	font-size: 1.5vw;
+	font-size: clamp(1.6rem, 1.5vw, 2.3rem);
 	line-height: 1.2;
 	font-weight: 400;
 	color: #222;
@@ -150,7 +150,8 @@ dd { font-style: italic; margin-bottom: 1rem; }
 
 figure,
 img {
-	max-width: 100%;
+	max-width: 600px;
+	width: 100%;
 	height: auto;
 }
 
@@ -350,21 +351,9 @@ article .sidebar,
 	padding: 1rem;
 }
 
-@media only screen and (min-width: 1920px) {
-	body {
-		font-size: 2.8rem
-	}
-}
-
 @media only screen and (min-width: 960px) {
 	p code {
 		font-size: .9em;
-	}
-}
-
-@media only screen and (max-width: 960px) {
-	body {
-		font-size: 1.6rem
 	}
 }
 
