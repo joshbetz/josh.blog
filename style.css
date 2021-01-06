@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 3.1.7
+Version: 3.1.8
 License: GNU General Public License v2 or later
 */
 
@@ -151,7 +151,6 @@ dd { font-style: italic; margin-bottom: 1rem; }
 figure,
 img {
 	max-width: 600px;
-	width: 100%;
 	height: auto;
 }
 
@@ -335,9 +334,6 @@ article .sidebar,
 	width: 100%;
 }
 
-.wp-block-image {
-	width: 100%;
-}
 .alignleft {
 	float: left;
 	padding-right: 2rem;
