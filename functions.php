@@ -11,6 +11,7 @@ add_action( 'wp_enqueue_scripts', function() {
 } );
 
 add_filter( 'wp_headers', function( $headers ) {
+	$headers[ 'X-Frame-Options' ] = 'DENY';
 	$headers[ 'X-XSS-Protection' ] = '1; mode=block';
     $headers[ 'X-Content-Type-Options' ] = 'nosniff';
 	$headers[ 'Content-Security-Policy' ] = "default-src 'self'; script-src 'report-sample' 'self' https://c0.wp.com/c/5.7/wp-includes/js/wp-embed.min.js https://stats.wp.com/e-202114.js; style-src 'report-sample' 'self' https://c0.wp.com https://fonts.googleapis.com; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self' https://fonts.gstatic.com; frame-src 'self'; img-src 'self' https://i0.wp.com https://i1.wp.com https://i2.wp.com https://i3.wp.com http://0.gravatar.com http://1.gravatar.com http://2.gravatar.com http://3.gravatar.com; manifest-src 'self'; media-src 'self'; report-uri 'none'; worker-src 'none';";
