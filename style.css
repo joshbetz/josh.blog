@@ -58,6 +58,13 @@ body {
 	margin-top: 2rem;
 }
 
+.site-info a {
+	text-decoration: none;
+}
+.site-info a:hover {
+	text-decoration: underline;
+}
+
 /*
  * Post
  */
@@ -157,7 +164,7 @@ code {
 pre {
 	padding: 10px;
 	overflow-x: scroll;
-	font-size: 0.8em;
+	font-size: 0.75em;
 }
 
 p code {
@@ -304,6 +311,10 @@ img.featured-image {
 .main-menu li {
 	list-style: none;
 	padding-right: 0.75em;
+}
+
+.main-menu a {
+	text-decoration: none;
 }
 
 /*
