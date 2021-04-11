@@ -15,6 +15,7 @@
 	<div id="header">
 		<div class="content">
 			<h1 class="page-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<p><?php echo get_bloginfo( 'description' ); ?></p>
 
 			<?php if ( has_nav_menu( 'main' ) || has_nav_menu( 'social' ) ) : ?>
 				<div id="site-header-menu" class="site-header-menu">
