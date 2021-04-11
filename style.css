@@ -122,11 +122,11 @@ h4, h5, h6 {
 }
 
 h1 { font-size: 200%; font-weight: 500; }
-h2, .post-content h1 { font-size: 150%; font-weight: 500; }
-h3, .post-content h2 { font-size: 130%; font-weight: 500; }
-h4, .post-content h3 { font-size: 115%; }
-h5, .post-content h4 { font-size: 100%; }
-h6, .post-content h5 { font-size: 100%; font-weight: 500; }
+h2, .post-content h1, h1.entry-title { font-size: 150%; font-weight: 500; }
+h3, .post-content h2, h2.entry-title { font-size: 130%; font-weight: 500; }
+h4, .post-content h3, h3.entry-title { font-size: 115%; }
+h5, .post-content h4, h4.entry-title { font-size: 100%; }
+h6, .post-content h5, h5.entry-title { font-size: 100%; font-weight: 500; }
 
 blockquote, .wp-block-quote {
 	border-left: solid 5px rgba(0,0,0,.2);
@@ -532,7 +532,7 @@ img.featured-image {
 .comment-metadata,
 .pingback .edit-link {
 	color: #686868;
-	font-size: 0.8em;
+	font-size: 0.7em;
 }
 
 .comment-metadata {
@@ -610,6 +610,12 @@ img.featured-image {
 	line-height: 1.6153846154;
 	margin-bottom: 0.5384615385em;
 	text-transform: uppercase;
+}
+
+.comment-form-cookies-consent label {
+	text-transform: none;
+	font-size: 0.7em;
+	display: inline;
 }
 
 .comment-list .comment-form {
