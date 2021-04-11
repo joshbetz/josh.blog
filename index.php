@@ -55,6 +55,12 @@
 				</div>
 			<article>
 		<?php endwhile; ?>
+	<?php else: ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<div class="content">
+					<p>404. Not Found. Sorry.</p>
+				</div>
+			<article>
 	<?php endif; ?>
 
 	<?php if ( is_single() ): ?>
