@@ -17,12 +17,10 @@
 	<?php endif; ?>
 </header>
 
-<?php
-	$url = get_the_post_thumbnail_url();
-	if ( $url ):
-?>
-<img class="featured-image" src="<?php echo esc_url( $url ) ?>" />
+<?php if ( $url = get_the_post_thumbnail_url() ): ?>
+	<img class="featured-image" src="<?php echo esc_url( $url ) ?>" />
 <?php endif; ?>
+
 <div class="post-content"><?php the_content(); ?></div>
 
 <footer class="entry-footer">
