@@ -82,6 +82,10 @@ body {
 	content: "·";
 }
 
+.updated:not(.published) {
+	display: none;
+}
+
 article.post:not(:last-child)::after {
 	content: "\2605 \2605 \2605";
 	display: block;
