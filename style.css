@@ -27,7 +27,7 @@ html {
  */
 body {
 	font-family: 'IBM Plex Sans', sans-serif;
-	line-height: 1.6em;
+	line-height: 1.7;
 	background: #fff;
 	color: #333;
 	font-size: clamp(1.8rem, 2vw, 2.3rem);
@@ -80,6 +80,15 @@ body {
 .comments-link:not(:last-child)::after {
 	padding: 0 1rem;
 	content: "·";
+}
+
+article.post:not(:last-child)::after {
+	content: "\2605 \2605 \2605";
+	display: block;
+	color: #ddd;
+	text-align: center;
+	margin: 4rem;
+	letter-spacing: 2rem;
 }
 
 /*
