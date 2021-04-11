@@ -59,12 +59,12 @@
 			<?php while ( have_posts() ): the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<?php get_template_part( 'content', get_post_format() ); ?>
-				<article>
+				</article>
 			<?php endwhile; ?>
 		<?php else: ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<p>404. Not Found. Sorry.</p>
-				<article>
+				</article>
 		<?php endif; ?>
 	</div>
 

@@ -547,16 +547,15 @@ img.featured-image {
 
 .comment-author {
 	color: #1a1a1a;
-	margin-bottom: 0.4375em;
 	font-size: 0.8em;
 }
 
 .comment-author .avatar {
 	float: left;
-	height: 42px;
+	width: 60px;
+	height: 60px;
 	margin-right: 0.875em;
 	position: relative;
-	width: 42px;
 	border-radius: 50%;
 }
 
@@ -579,7 +578,7 @@ img.featured-image {
 .comment-metadata,
 .pingback .edit-link {
 	color: #686868;
-	font-size: 0.7em;
+	font-size: 0.6em;
 }
 
 .comment-metadata {
