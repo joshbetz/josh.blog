@@ -1,83 +1,136 @@
-<?php get_header(); ?>
+<!doctype html>
+<html <?php language_attributes(); ?> class="no-js">
 
-<section id="articles">
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" type="image/png">
+	
+	<?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+
+	<div id="header">
+		<div class="content">
+			<h1 class="page-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+			<?php if ( has_nav_menu( 'main' ) || has_nav_menu( 'social' ) ) : ?>
+				<div id="site-header-menu" class="site-header-menu">
+					<?php if ( has_nav_menu( 'main' ) ) : ?>
+						<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Main Menu' ); ?>">
+							<?php
+								wp_nav_menu( array(
+									'theme_location' => 'main',
+									'menu_class'     => 'main-menu',
+								 ) );
+							?>
+						</nav>
+					<?php endif; ?>
+
+					<?php if ( has_nav_menu( 'social' ) ) : ?>
+						<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu' ); ?>">
+							<?php
+								wp_nav_menu( array(
+									'theme_location' => 'social',
+									'menu_class'     => 'social-links-menu',
+									'depth'          => 1,
+									'link_before'    => '<span class="screen-reader-text">',
+									'link_after'     => '</span>',
+								) );
+							?>
+						</nav>
+					<?php endif; ?>
+				</div>
+			<?php endif; ?>
+		</div>
+	</div>
+
 	<?php if ( have_posts() ): ?>
 		<?php while ( have_posts() ): the_post(); ?>
-		<div>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<aside class="sidebar">
-					<div class="sidebar-contents">
-						<?php if ( ! is_page() ):?>
-						<a class="post-date" href="<?php the_permalink(); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a>
-						<div class="categories">
-							<h3>Categories</h3>
-							<?php echo get_the_category_list(); ?>
-						</div>
-						<div class="tags"><?php echo get_the_tag_list( '<h3>Tags</h3><ul><li>', '</li><li>', '</li></ul>' ); ?></div>
-						<?php endif; ?>
-					</div>
-				</aside>
 				<div class="content">
-					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-					<div class="post-content"><?php the_content(); ?></div>
+					<?php get_template_part( 'content', get_post_format() ); ?>
 				</div>
 			<article>
-		</div>
 		<?php endwhile; ?>
-	<?php else: ?>
-		<section id="fourohfour" class="page">
+	<?php endif; ?>
+
+	<?php if ( is_single() ): ?>
+		<nav class="page-navigation">
 			<div class="sidebar"></div>
 			<div class="content">
-				<p>No posts found.</p>
-				<form>
-					<input type=search name=s placeholder=Search...>
-					<input type=submit value=Search>
-				</form>
+				<?php
+					the_post_navigation( array(
+						'prev_text' => '&lsaquo;&nbsp;%title',
+						'next_text' => '%title&nbsp;&rsaquo;'
+					) );
+				?>
 			</div>
-		</section>
+		</nav>
+
+		<?php if ( comments_open() || get_comments_number() ): ?>
+			<div class="content">
+				<?php comments_template(); ?>
+
+				<nav class="page-navigation">
+					<div class="sidebar"></div>
+					<div class="content">
+						<?php
+							the_post_navigation( array(
+								'prev_text' => '&lsaquo;&nbsp;%title',
+								'next_text' => '%title&nbsp;&rsaquo;'
+							) );
+						?>
+					</div>
+				</nav>
+			</div>
+		<?php endif; ?>
+	<?php else: ?>
+		<nav class="page-navigation">
+			<div class="sidebar"></div>
+			<div class="nav-links content">
+				<div class="nav-previous"><?php previous_posts_link( '&lsaquo;&nbsp;Previous Page' ); ?></div>
+				<div class="nav-next"><?php next_posts_link( 'Next Page&nbsp;&rsaquo;', '' ); ?></div>
+			</div>
+		</nav>
 	<?php endif; ?>
-</section>
 
-<?php if ( is_single() ): ?>
-	<nav class="page-navigation">
-		<div class="sidebar"></div>
+	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="content">
-			<?php
-				the_post_navigation( array(
-					'prev_text' => '&lsaquo;&nbsp;%title',
-					'next_text' => '%title&nbsp;&rsaquo;'
-				) );
-			?>
+			<?php if ( has_nav_menu( 'main' ) ) : ?>
+				<nav class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Main Menu', '' ); ?>">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'main',
+							'menu_class'     => 'main-menu',
+						 ) );
+					?>
+				</nav>
+			<?php endif; ?>
+
+			<?php if ( has_nav_menu( 'social' ) ) : ?>
+				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', '' ); ?>">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'social',
+							'menu_class'     => 'social-links-menu',
+							'depth'          => 1,
+							'link_before'    => '<span class="screen-reader-text">',
+							'link_after'     => '</span>',
+						) );
+					?>
+				</nav>
+			<?php endif; ?>
+
+			<div class="site-info">
+				&copy; <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span> <?php echo date( 'Y' ); ?>.
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', '' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'josh.blog' ), 'WordPress' ); ?></a>
+			</div>
 		</div>
-	</nav>
+	</footer>
 
-	<?php if ( comments_open() || get_comments_number() ):
-		comments_template();
-	?>
-
-	<nav class="page-navigation">
-		<div class="sidebar"></div>
-		<div class="content">
-			<?php
-				the_post_navigation( array(
-					'prev_text' => '&lsaquo;&nbsp;%title',
-					'next_text' => '%title&nbsp;&rsaquo;'
-				) );
-			?>
-		</div>
-	</nav>
-
-	<?php endif; ?>
-<?php endif; ?>
-
-<?php if ( ! is_single() ): ?>
-<nav class="page-navigation">
-	<div class="sidebar"></div>
-	<div class="nav-links content">
-		<div class="nav-previous"><?php previous_posts_link( '&lsaquo;&nbsp;Previous Page' ); ?></div>
-		<div class="nav-next"><?php next_posts_link( 'Next Page&nbsp;&rsaquo;', '' ); ?></div>
-	</div>
-</nav>
-<?php endif; ?>
-
-<?php get_footer(); ?>
+	<?php wp_footer(); ?>
+</body>
+</html>
