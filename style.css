@@ -157,6 +157,7 @@ code {
 pre {
 	padding: 10px;
 	overflow-x: scroll;
+	font-size: 0.8em;
 }
 
 p code {
