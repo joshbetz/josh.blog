@@ -514,10 +514,11 @@ img.featured-image {
 
 .comment-author .avatar {
 	float: left;
-	height: 28px;
+	height: 42px;
 	margin-right: 0.875em;
 	position: relative;
-	width: 28px;
+	width: 42px;
+	border-radius: 50%;
 }
 
 .bypostauthor > article .fn:after {
