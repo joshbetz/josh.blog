@@ -1,9 +1,9 @@
 <?php
 
 add_action( 'wp_enqueue_scripts', function() {
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=IBM+Plex+Sans:4.0.900i,500,700&display=swap' );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,700&display=swap' );
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', [], '3.4.1' );
-	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', [ 'google-fonts', 'genericons' ], '4.0.9' );
+	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', [ 'google-fonts', 'genericons' ], '4.0.10' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
