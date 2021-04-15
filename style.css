@@ -88,12 +88,13 @@ body {
 
 article.post:not(:last-child)::after {
 	content: "\2605 \2605 \2605";
+	font-family: "Osaka", "Zapf Dingbats";
 	display: block;
 	color: #ddd;
 	text-align: center;
 	margin: 4rem;
 	letter-spacing: 2rem;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 }
 
 /*
