@@ -31,6 +31,7 @@ body {
 	background: #fff;
 	color: #333;
 	font-size: clamp(1.8rem, 2vw, 2.3rem);
+	min-height: 0vw; /* hack to fix clamp in Safari https://stackoverflow.com/a/65093383 */
 	margin: 0;
 	padding: 0;
 }
