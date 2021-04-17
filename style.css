@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.0.12
+Version: 4.0.13
 License: GNU General Public License v2 or later
 */
 
@@ -75,6 +75,10 @@ body {
 	text-decoration: none;
 	color: #999;
 	clear: both;
+}
+
+.entry-footer {
+	margin-top: 1rem;
 }
 
 .cat-links:not(:last-child)::after,
@@ -197,6 +201,11 @@ p code {
 	padding: 1rem 2rem;
 }
 
+iframe {
+	max-width: 100%;
+	height: auto;
+}
+
 table {
 	margin-bottom: 2rem;
 }
@@ -219,10 +228,15 @@ figure {
 }
 
 img {
-	max-width: 600px;
+	max-width: 100%;
+	width: 600px;
 	max-height: 1200px;
 	height: auto;
 	width: auto;
+}
+
+.wp-block-image {
+	margin: 0;
 }
 
 .wp-block-image img {
@@ -237,13 +251,9 @@ img.featured-image {
 }
 
 @media only screen and (max-width: 800px) {
-	article {
-		overflow: hidden;
-	}
-
 	img.featured-image {
-		width: 100vw;
-		max-width: 100vw;
+		width: calc(100% + 4rem);
+		max-width: calc(100% + 4rem);
 		margin: 2rem -2rem;
 	}
 }
