@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.0.13
+Version: 4.0.14
 License: GNU General Public License v2 or later
 */
 
@@ -103,6 +103,10 @@ article.post:not(:last-child)::after {
 	font-size: 1.4rem;
 }
 
+.post-content {
+	margin: 2rem 0;
+}
+
 /*
  * Navigation
  */
@@ -138,6 +142,11 @@ a, a:hover, a:active {
 
 a:hover {
 	color: var(--secondary-accent-color);
+}
+
+.external-link:after {
+	font-family: "Genericons";
+	content: "\f107";
 }
 
 h1 a {
