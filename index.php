@@ -14,7 +14,7 @@
 
 	<div id="header">
 		<div class="content">
-			<h1 class="page-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="page-title"><?php echo get_avatar( get_option( 'admin_email' ), 60 ) ;?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<p><?php echo get_bloginfo( 'description' ); ?></p>
 
 			<?php if ( has_nav_menu( 'main' ) || has_nav_menu( 'social' ) ) : ?>
