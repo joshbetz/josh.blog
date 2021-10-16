@@ -254,7 +254,7 @@ img {
 }
 
 img.featured-image,
-img.alignwide {
+figure.alignwide {
 	width: 120%;
 	max-width: 120%;
 	margin: 2rem -10%;
@@ -262,7 +262,7 @@ img.alignwide {
 
 @media only screen and (max-width: 800px) {
 	img.featured-image,
-	img.alignwide {
+	figure.alignwide {
 		width: calc(100% + 4rem);
 		max-width: calc(100% + 4rem);
 		margin: 2rem -2rem;
