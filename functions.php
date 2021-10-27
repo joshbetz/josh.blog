@@ -11,9 +11,9 @@ add_action( 'wp_enqueue_scripts', function() {
 } );
 
 add_filter( 'wp_headers', function( $headers ) {
-	$headers[ 'X-Frame-Options' ] = 'DENY';
+	$headers[ 'X-Frame-Options' ] = 'SAMEORIGIN';
 	$headers[ 'X-XSS-Protection' ] = '1; mode=block';
-    $headers[ 'X-Content-Type-Options' ] = 'nosniff';
+	$headers[ 'X-Content-Type-Options' ] = 'nosniff';
 
 	return $headers;
 } );
