@@ -49,24 +49,26 @@
 		</div>
 	</div>
 
-	<div class="content">
-		<?php
-			if ( is_archive() ) {
-				the_archive_title( '<h1 class="archive-title">', '</h1>' );
-			}
-		?>
+	<div class="wrapper">
+		<div class="content">
+			<?php
+				if ( is_archive() ) {
+					the_archive_title( '<h1 class="archive-title">', '</h1>' );
+				}
+			?>
 
-		<?php if ( have_posts() ): ?>
-			<?php while ( have_posts() ): the_post(); ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php get_template_part( 'content', get_post_format() ); ?>
-				</article>
-			<?php endwhile; ?>
-		<?php else: ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<p>404. Not Found. Sorry.</p>
-				</article>
-		<?php endif; ?>
+			<?php if ( have_posts() ): ?>
+				<?php while ( have_posts() ): the_post(); ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<?php get_template_part( 'content', get_post_format() ); ?>
+					</article>
+				<?php endwhile; ?>
+			<?php else: ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<p>404. Not Found. Sorry.</p>
+					</article>
+			<?php endif; ?>
+		</div>
 	</div>
 
 	<?php if ( is_single() ): ?>
