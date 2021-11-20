@@ -231,6 +231,8 @@ th { font-weight: 500; }
 dt { font-weight: 500; }
 dd { font-style: italic; margin-bottom: 1rem; }
 
+li { padding: 1rem 0; }
+
 figure {
 	max-width: 100%;
 	height: auto;
