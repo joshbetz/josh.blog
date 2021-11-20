@@ -138,6 +138,7 @@
 			<div class="site-info">
 				&copy; <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span> <?php echo date( 'Y' ); ?>.
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', '' ) ); ?>"><?php printf( __( 'Proudly powered by %s.', 'josh.blog' ), 'WordPress' ); ?></a>
+				Made with 🧀 in Madison.
 			</div>
 		</div>
 	</footer>
