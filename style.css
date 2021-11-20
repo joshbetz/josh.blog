@@ -27,7 +27,7 @@ html {
  */
 body {
 	font-family: 'Montserrat', sans-serif;
-	line-height: 1.7;
+	line-height: 1.5;
 	background: #fff;
 	color: #333;
 	font-size: clamp(1.6rem, 2.5vw, 2.4rem);
