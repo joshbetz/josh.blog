@@ -1,7 +1,7 @@
 <?php
 
 add_action( 'wp_enqueue_scripts', function() {
-	$fonts = 'Source+Sans+Pro:ital,wght@0,400;0,600;1,400';
+	$fonts = 'Montserrat:ital,wght@0,400;0,600;1,400';
 	wp_enqueue_style( 'google-fonts', sprintf( '//fonts.googleapis.com/css?family=%s&display=swap', $fonts ) );
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', [], '3.4.1' );
 	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', [ 'google-fonts', 'genericons' ], '4.0.19' );
