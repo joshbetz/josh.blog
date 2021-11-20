@@ -233,6 +233,10 @@ dd { font-style: italic; margin-bottom: 1rem; }
 
 li { padding: 1rem 0; }
 
+
+/**
+ * Media
+ */
 figure {
 	max-width: 100%;
 	height: auto;
@@ -270,6 +274,18 @@ figure.alignfull {
 	width: 200%;
 	max-width: 200%;
 	margin: 3em -50%;
+}
+
+img.featured-image:first-child,
+figure.alignwide:first-child,
+figure.alignfull:first-child {
+	margin-top: 0;
+}
+
+img.featured-image:last-child,
+figure.alignwide:last-child,
+figure.alignfull:last-child {
+	margin-bottom: 0;
 }
 
 .wp-block-image.alignfull img,
