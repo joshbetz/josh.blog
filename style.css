@@ -264,6 +264,12 @@ figure.alignwide {
 	margin: 3em -15%;
 }
 
+figure.alignfull {
+	width: 200%;
+	max-width: 200%;
+	margin: 3em -50%;
+}
+
 .wp-block-image.alignfull img,
 .wp-block-image.alignwide img {
 	max-width: 100vw;
