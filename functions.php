@@ -4,7 +4,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	$fonts = 'Montserrat:ital,wght@0,400;0,600;1,400';
 	wp_enqueue_style( 'google-fonts', sprintf( '//fonts.googleapis.com/css?family=%s&display=swap', $fonts ) );
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', [], '3.4.1' );
-	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', [ 'google-fonts', 'genericons' ], '4.1.0' );
+	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', [ 'google-fonts', 'genericons' ], wp_get_theme()->get( 'Version' ) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

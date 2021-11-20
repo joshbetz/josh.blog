@@ -27,5 +27,4 @@ esac
 newVersion="$major.$minor.$patch"
 
 echo $newVersion
-sed -i '' -e "s/$version/$newVersion/g" functions.php
 sed -i '' -e "s/$version/$newVersion/g" style.css
