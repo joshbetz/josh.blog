@@ -30,7 +30,7 @@ body {
 	line-height: 1.7;
 	background: #fff;
 	color: #333;
-	font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+	font-size: clamp(1.6rem, 2.5vw, 2.4rem);
 	min-height: 0vw; /* hack to fix clamp in Safari https://stackoverflow.com/a/65093383 */
 	margin: 0;
 	padding: 0;
@@ -165,7 +165,7 @@ h4, h5, h6 {
 	word-wrap: break-word;
 }
 
-h1 { font-size: 200%; }
+h1 { font-size: 4rem; }
 .archive-title { font-size: 100%; text-transform: uppercase; }
 h2, .post-content h1, h1.entry-title { font-size: 1.5em; }
 h3, .post-content h2, h2.entry-title { font-size: 1.3em; }
