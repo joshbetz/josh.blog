@@ -420,11 +420,15 @@ figure.alignfull:last-child {
 
 .main-menu li {
 	list-style: none;
-	padding-right: 0.75em;
 }
 
 .main-menu a {
 	text-decoration: none;
+}
+
+.main-navigation .menu-item:not(:last-child):after {
+	content: '\b7';
+	padding: 1rem;
 }
 
 /*
