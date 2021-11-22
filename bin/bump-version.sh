@@ -7,6 +7,8 @@ major=$(echo $version | awk -F. '{ print $1 }')
 minor=$(echo $version | awk -F. '{ print $2 }')
 patch=$(echo $version | awk -F. '{ print $3 }')
 
+version="$major\.$minor\.$patch"
+
 case "$BUMP" in
 	'major')
 		major=$(($major + 1))
