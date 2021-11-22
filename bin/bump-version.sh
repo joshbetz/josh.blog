@@ -27,7 +27,8 @@ case "$BUMP" in
 
 	*)
 		echo "Error: valid operations are major, minor, or patch"
-		exit 1;
+		exit 1
+		;;
 esac
 
 newVersion="$major.$minor.$patch"
