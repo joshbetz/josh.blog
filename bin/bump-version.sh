@@ -21,9 +21,13 @@ case "$BUMP" in
 		patch='0'
 		;;
 
-	'patch' | *)
+	'patch')
 		patch=$(($patch + 1))
 		;;
+
+	*)
+		echo "Error: valid operations are major, minor, or patch"
+		exit 1;
 esac
 
 newVersion="$major.$minor.$patch"
