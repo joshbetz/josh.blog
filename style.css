@@ -54,9 +54,13 @@ body {
 
 #colophon {
 	background-color: #f9f9f9;
-	font-size: 1.6rem;
 	color: #454545;
 	border-top: solid 2px #f0f0f0;
+}
+
+#colophon .main-navigation,
+#colophon .site-info {
+	font-size: 1.6rem;
 }
 
 .page-title {
@@ -88,6 +92,10 @@ body {
 
 	.content {
 		padding: 0 2rem;
+	}
+
+	#colophon .content {
+		padding: 2rem;
 	}
 }
 
