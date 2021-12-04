@@ -136,7 +136,7 @@
 			<?php endif; ?>
 
 			<div class="site-info">
-				&copy; <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span> <?php echo date( 'Y' ); ?>.
+				&copy; <?php echo date( 'Y' ); ?> <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>.
 				<span class="page-description"><?php echo get_bloginfo( 'description' ); ?>.</span>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', '' ) ); ?>"><?php printf( __( 'Proudly powered by %s.', 'josh.blog' ), 'WordPress' ); ?></a>
 			</div>
