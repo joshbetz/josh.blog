@@ -30,7 +30,7 @@ body {
 	line-height: 1.6;
 	background: #fff;
 	color: #333;
-	font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+	font-size: clamp(1.6rem, 2.5vw, 2.2rem);
 	min-height: 0vw; /* hack to fix clamp in Safari https://stackoverflow.com/a/65093383 */
 	margin: 0;
 	padding: 0;
