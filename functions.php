@@ -166,3 +166,13 @@ if ( ! function_exists( '_s_entry_footer' ) ) :
 		);
 	}
 endif;
+
+add_filter( 'the_title', function( $title ) {
+	$last_space = strrpos( $title, ' ' );
+
+	if ( ! $last_space ) {
+		return $title;
+	}
+
+	return substr_replace( $title, "\xC2\xA0", $last_space, 1 );
+} );
