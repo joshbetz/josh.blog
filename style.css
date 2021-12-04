@@ -260,7 +260,7 @@ th { font-weight: 600; }
 dt { font-weight: 600; }
 dd { font-style: italic; margin-bottom: 1rem; }
 
-.post-content li { padding: 1rem 0; }
+.post-content li { padding: 0.5rem 0; }
 
 
 /**
