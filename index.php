@@ -72,6 +72,33 @@
 	</div>
 
 	<?php if ( is_single() ): ?>
+		<?php if ( get_the_author_meta( 'description' ) ): ?>
+			<div class="content">
+				<div class="author-bio">
+					<div class="author-title-wrapper">
+						<div class="author-avatar vcard">
+							<?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?>
+						</div>
+						<h2 class="author-title heading-size-4">
+							<?php
+							printf(
+								/* translators: %s: Author name */
+								__( 'By %s', 'josh.blog' ),
+								esc_html( get_the_author() )
+							);
+							?>
+						</h2>
+					</div><!-- .author-name -->
+					<div class="author-description">
+						<?php echo wp_kses_post( wpautop( get_the_author_meta( 'description' ) ) ); ?>
+						<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+							<?php _e( 'View Archive <span aria-hidden="true">&rarr;</span>', 'josh.blog' ); ?>
+						</a>
+					</div><!-- .author-description -->
+				</div><!-- .author-bio -->
+			</div>
+		<?php endif; ?>
+
 		<nav class="page-navigation">
 			<div class="content">
 				<?php
@@ -103,7 +130,7 @@
 		<nav class="page-navigation">
 			<div class="nav-links content">
 				<div class="nav-previous"><?php previous_posts_link( '&lsaquo;&nbsp;Previous Page' ); ?></div>
-				<div class="nav-next"><?php next_posts_link( 'Next Page&nbsp;&rsaquo;', '' ); ?></div>
+				<div class="nav-next"><?php next_posts_link( 'Next Page&nbsp;&rsaquo;', 'josh.blog' ); ?></div>
 			</div>
 		</nav>
 	<?php endif; ?>
@@ -111,7 +138,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="content">
 			<?php if ( has_nav_menu( 'main' ) ) : ?>
-				<nav class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Main Menu', '' ); ?>">
+				<nav class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Main Menu', 'josh.blog' ); ?>">
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'main',
@@ -122,7 +149,7 @@
 			<?php endif; ?>
 
 			<?php if ( has_nav_menu( 'social' ) ) : ?>
-				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', '' ); ?>">
+				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'josh.blog' ); ?>">
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'social',
@@ -138,7 +165,7 @@
 			<div class="site-info">
 				&copy; <?php echo date( 'Y' ); ?> <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>.
 				<span class="page-description"><?php echo get_bloginfo( 'description' ); ?>.</span>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', '' ) ); ?>"><?php printf( __( 'Proudly powered by %s.', 'josh.blog' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'josh.blog' ) ); ?>"><?php printf( __( 'Proudly powered by %s.', 'josh.blog' ), 'WordPress' ); ?></a>
 			</div>
 		</div>
 	</footer>
