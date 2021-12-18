@@ -9,26 +9,7 @@ if ( post_password_required() ) {
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
-			<?php
-				$comments_number = get_comments_number();
-				if ( 1 === $comments_number ) {
-					/* translators: %s: post title */
-					printf( _x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'josh.blog' ), get_the_title() );
-				} else {
-					printf(
-						/* translators: 1: number of comments, 2: post title */
-						_nx(
-							'%1$s thought on &ldquo;%2$s&rdquo;',
-							'%1$s thoughts on &ldquo;%2$s&rdquo;',
-							$comments_number,
-							'comments title',
-							'josh.blog'
-						),
-						number_format_i18n( $comments_number ),
-						get_the_title()
-					);
-				}
-			?>
+			Comments <span class="comments-number"><?php echo number_format_i18n( get_comments_number() ); ?></span>
 		</h2>
 
 		<?php the_comments_navigation(); ?>
