@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.2.1
+Version: 4.2.2
 License: GNU General Public License v2 or later
 */
 
@@ -51,6 +51,7 @@ License: GNU General Public License v2 or later
 }
 
 :root {
+	--base-font-color: #333;
 	--background-color: #e3f2f9;
 	--background-accent-color: #d4eef9;
 	--primary-accent-color: #559fc6;
@@ -72,7 +73,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.6;
 	background: #fff;
-	color: #333;
+	color: var(--base-font-color);
 	font-size: clamp(1.6rem, 2.5vw, 2.2rem);
 	min-height: 0vw; /* hack to fix clamp in Safari https://stackoverflow.com/a/65093383 */
 	margin: 0;
@@ -117,8 +118,8 @@ body {
 	margin: 1rem 0;
 }
 
-.site-info {
-	margin-top: 2rem;
+.footer-menus {
+	margin-bottom: 4rem;
 }
 
 .site-info a {
@@ -126,6 +127,19 @@ body {
 }
 .site-info a:hover {
 	text-decoration: underline;
+}
+
+.site-info > span:not(:last-child):after {
+	content: "";
+	margin: 0 1rem;
+}
+
+.copyright {
+	font-weight: bold;
+}
+
+.copyright a {
+	color: var(--base-font-color);
 }
 
 @media only screen and (max-width: 750px) {
@@ -318,7 +332,7 @@ pre {
 }
 
 p code {
-	color: #333;
+	color: var(--base-font-color);
 }
 
 .wp-block-code code {

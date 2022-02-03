@@ -131,42 +131,45 @@
 		<nav class="page-navigation">
 			<div class="nav-links content">
 				<div class="nav-previous"><?php previous_posts_link( '&lsaquo;&nbsp;Previous Page' ); ?></div>
-				<div class="nav-next"><?php next_posts_link( 'Next Page&nbsp;&rsaquo;', 'josh.blog' ); ?></div>
+				<div class="nav-next"><?php next_posts_link( 'Next Page&nbsp;&rsaquo;' ); ?></div>
 			</div>
 		</nav>
 	<?php endif; ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="content">
-			<?php if ( has_nav_menu( 'main' ) ) : ?>
-				<nav class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Main Menu', 'josh.blog' ); ?>">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'main',
-							'menu_class'     => 'main-menu',
-						 ) );
-					?>
-				</nav>
-			<?php endif; ?>
+			<?php if ( has_nav_menu( 'main' ) || has_nav_menu( 'social' ) ): ?>
+				<div class="footer-menus">
+					<?php if ( has_nav_menu( 'main' ) ) : ?>
+						<nav class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Main Menu', 'josh.blog' ); ?>">
+							<?php
+								wp_nav_menu( array(
+									'theme_location' => 'main',
+									'menu_class'     => 'main-menu',
+								 ) );
+							?>
+						</nav>
+					<?php endif; ?>
 
-			<?php if ( has_nav_menu( 'social' ) ) : ?>
-				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'josh.blog' ); ?>">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'social',
-							'menu_class'     => 'social-links-menu',
-							'depth'          => 1,
-							'link_before'    => '<span class="screen-reader-text">',
-							'link_after'     => '</span>',
-						) );
-					?>
-				</nav>
+					<?php if ( has_nav_menu( 'social' ) ) : ?>
+						<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'josh.blog' ); ?>">
+							<?php
+								wp_nav_menu( array(
+									'theme_location' => 'social',
+									'menu_class'     => 'social-links-menu',
+									'depth'          => 1,
+									'link_before'    => '<span class="screen-reader-text">',
+									'link_after'     => '</span>',
+								) );
+							?>
+						</nav>
+					<?php endif; ?>
+				</div>
 			<?php endif; ?>
 
 			<div class="site-info">
-				&copy; <?php echo date( 'Y' ); ?> <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>.
-				<span class="page-description"><?php echo get_bloginfo( 'description' ); ?>.</span>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'josh.blog' ) ); ?>"><?php printf( __( 'Proudly powered by %s.', 'josh.blog' ), 'WordPress' ); ?></a>
+				<span class="copyright">&copy; <?php echo date( 'Y' ); ?> <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></span>
+				<span><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'josh.blog' ) ); ?>"><?php printf( __( 'Powered by %s', 'josh.blog' ), 'WordPress' ); ?></a></span>
 			</div>
 		</div>
 	</footer>
