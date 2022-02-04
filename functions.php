@@ -61,7 +61,7 @@ add_action( 'after_setup_theme', function() {
 } );
 
 add_filter( 'pre_get_posts', function( $query ) {
-	if ( is_archive() ) {
+	if ( is_archive() || is_search() ) {
 		$query->set( 'posts_per_page', 20 );
 	}
 
