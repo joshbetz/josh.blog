@@ -84,12 +84,11 @@ function posted_on_time_string() {
 }
 
 if ( ! function_exists( '_s_posted_on' ) ) :
-	$time_string = posted_on_time_string();
-
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
 	function _s_posted_on() {
+		$time_string = posted_on_time_string();
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
 			esc_html_x( 'Posted on %s', 'post date' ),
@@ -97,7 +96,6 @@ if ( ! function_exists( '_s_posted_on' ) ) :
 		);
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
 	}
 endif;
 
