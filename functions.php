@@ -60,6 +60,14 @@ add_action( 'after_setup_theme', function() {
 	] );
 } );
 
+add_filter( 'pre_get_posts', function( $query ) {
+	if ( is_archive() ) {
+		$query->set( 'posts_per_page', 20 );
+	}
+
+	return $query;
+} );
+
 function posted_on_time_string() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
