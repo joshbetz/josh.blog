@@ -2,14 +2,7 @@
 
 <div class="wrapper">
 	<div class="content">
-		<h1 class="entry-title">
-			<?php
-				printf(
-					esc_html__( 'Results for "%s"', 'josh.blog' ),
-					'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
-				);
-			?>
-		</h1>
+		<?php get_search_form(); ?>
 
 		<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ): the_post(); ?>
@@ -17,6 +10,8 @@
 					<?php get_template_part( 'templates/archive', get_post_format() ); ?>
 				</div>
 			<?php endwhile; ?>
+		<?php else: ?>
+			<p>Couldn't find anything like that.</p>
 		<?php endif; ?>
 	</div>
 </div>
