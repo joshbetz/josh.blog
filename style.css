@@ -54,8 +54,21 @@ License: GNU General Public License v2 or later
 	--base-font-color: #333;
 	--background-color: #e3f2f9;
 	--background-accent-color: #d4eef9;
+	--title-accent-color: #559fc6;
 	--primary-accent-color: #559fc6;
 	--secondary-accent-color: #55c6b5;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--base-font-color: #ddd;
+
+		--background-color: #144962;
+		--background-accent-color: #105a79;
+		--title-accent-color: #112834;
+		--primary-accent-color: #559fc6;
+		--secondary-accent-color: #55c6b5;
+	}
 }
 
 * { box-sizing: border-box; }
@@ -97,9 +110,9 @@ body {
 }
 
 #colophon {
-	background-color: #f9f9f9;
-	color: #454545;
-	border-top: solid 2px #f0f0f0;
+	color: var(--base-font-color);
+	background-color: var(--background-color);
+	border-top: solid 2px var(--background-accent-color);
 }
 
 #colophon .main-navigation,
@@ -284,6 +297,10 @@ article.post:not(:last-child)::after {
  */
 a, a:hover, a:active {
 	color: var(--primary-accent-color);
+}
+
+#header .page-title a, #header .page-title a:hover, #header .page-title a:active {
+	color: var(--title-accent-color);
 }
 
 a:hover {
@@ -1215,4 +1232,14 @@ input[type="search"].search-field {
 	top: 5px;
 	width: auto;
 	z-index: 100000;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		background: #555;
+	}
+
+	body {
+		background: #222;
+	}
 }
