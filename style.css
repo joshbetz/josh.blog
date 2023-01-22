@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.3.5
+Version: 4.3.6
 License: GNU General Public License v2 or later
 */
 
@@ -704,6 +704,9 @@ figure.alignfull:last-child {
 }
 .social-navigation a[href*="/feed"]:before {
 	content: "\f413";
+}
+.social-navigation a[href*="hachyderm.io"]:before {
+	content: "🐘";
 }
 
 /*
