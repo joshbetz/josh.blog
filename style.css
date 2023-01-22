@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.3.7
+Version: 4.3.8
 License: GNU General Public License v2 or later
 */
 
@@ -62,7 +62,6 @@ License: GNU General Public License v2 or later
 @media (prefers-color-scheme: dark) {
 	:root {
 		--base-font-color: #ddd;
-
 		--background-color: #144962;
 		--background-accent-color: #105a79;
 		--title-accent-color: #112834;
