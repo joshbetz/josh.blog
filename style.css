@@ -52,21 +52,27 @@ License: GNU General Public License v2 or later
 
 :root {
 	--base-font-color: #333;
+	--accent-font-color: #ddd;
 	--background-color: #e3f2f9;
 	--background-accent-color: #d4eef9;
 	--title-accent-color: #559fc6;
 	--primary-accent-color: #559fc6;
 	--secondary-accent-color: #55c6b5;
+
+	--border-color: #d1d1d1;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 		--base-font-color: #ddd;
+		--accent-font-color: #333;
 		--background-color: #144962;
 		--background-accent-color: #105a79;
 		--title-accent-color: #112834;
 		--primary-accent-color: #559fc6;
 		--secondary-accent-color: #55c6b5;
+
+		--border-color: #3f3f3f;
 	}
 }
 
@@ -198,7 +204,7 @@ article.post:not(:last-child)::after {
 	content: "\2605 \2605 \2605";
 	font-family: "Osaka", "Zapf Dingbats";
 	display: block;
-	color: #ddd;
+	color: var(--accent-font-color);
 	text-align: center;
 	margin: 4rem;
 	letter-spacing: 2rem;
@@ -753,6 +759,12 @@ figure.alignfull:last-child {
 	border-end-start-radius: 0;
 }
 
+@media (prefers-color-scheme: dark) {
+	.comments-number {
+		background: #0f0f0f;
+	}
+}
+
 .comment-list + .comment-respond,
 .comment-navigation + .comment-respond {
 	padding-top: 1.75em;
@@ -779,7 +791,7 @@ figure.alignfull:last-child {
 .comment-list article,
 .comment-list .pingback,
 .comment-list .trackback {
-	border-top: 1px solid #d1d1d1;
+	border-top: 1px solid var(--border-color);
 	padding: 1.75em 0;
 }
 
@@ -883,7 +895,7 @@ figure.alignfull:last-child {
 }
 
 .comment-reply-link {
-	border: 1px solid #d1d1d1;
+	border: 1px solid var(--border-color);
 	border-radius: 4px;
 	color: #007acc;
 	display: inline-block;
@@ -936,7 +948,7 @@ figure.alignfull:last-child {
 }
 
 .no-comments {
-	border-top: 1px solid #d1d1d1;
+	border-top: 1px solid var(--border-color);
 	font-weight: 700;
 	margin: 0;
 	padding-top: 1.75em;
@@ -1035,7 +1047,7 @@ input[type="radio"] {
 }
 
 fieldset {
-	border: 1px solid #d1d1d1;
+	border: 1px solid var(--border-color);
 	margin: 0 0 1.75em;
 	min-width: inherit;
 	padding: 0.875em;
@@ -1121,7 +1133,7 @@ input[type="number"],
 textarea {
 	background: #f7f7f7;
 	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-	border: 1px solid #d1d1d1;
+	border: 1px solid var(--border-color);
 	border-radius: 2px;
 	color: #686868;
 	padding: 0.625em 0.4375em;
