@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.3.8
+Version: 4.3.9
 License: GNU General Public License v2 or later
 */
 
@@ -166,7 +166,7 @@ body {
 	}
 
 	.content {
-		padding: 0 2rem;
+		padding: 1rem 2rem;
 	}
 
 	#colophon .content {
