@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.3.11
+Version: 4.3.12
 License: GNU General Public License v2 or later
 */
 
@@ -550,7 +550,7 @@ figure.alignfull:last-child {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
-	font-family: "Genericons";
+	font-family: "social-logos";
 	font-size: 20px;
 	font-style: normal;
 	font-variant: normal;
@@ -631,9 +631,6 @@ figure.alignfull:last-child {
 .social-navigation a[href*="codepen.io"]:before {
 	content: "\f216";
 }
-.social-navigation a[href*="digg.com"]:before {
-	content: "\f221";
-}
 .social-navigation a[href*="dribbble.com"]:before {
 	content: "\f201";
 }
@@ -659,19 +656,10 @@ figure.alignfull:last-child {
 	content: "\f215";
 }
 .social-navigation a[href*="linkedin.com"]:before {
-	content: "\f208";
-}
-.social-navigation a[href*="path.com"]:before {
-	content: "\f219";
+	content: "\f207";
 }
 .social-navigation a[href*="pinterest.com"]:before {
 	content: "\f210";
-}
-.social-navigation a[href*="getpocket.com"]:before {
-	content: "\f224";
-}
-.social-navigation a[href*="polldaddy.com"]:before {
-	content: "\f217";
 }
 .social-navigation a[href*="reddit.com"]:before {
 	content: "\f222";
@@ -711,10 +699,10 @@ figure.alignfull:last-child {
 	content: "\f413";
 }
 .social-navigation a[href*="hachyderm.io"]:before {
-	content: "🐘";
+	content:"\f10a";
 }
 .social-navigation a[href*="bsky.app"]:before {
-	content: "🦋";
+	content:"\f10f";
 }
 
 /*
