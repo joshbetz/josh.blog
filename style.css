@@ -696,7 +696,7 @@ figure.alignfull:last-child {
 	background-color: #DB7E36;
 	color: white;
 }
-.social-navigation a[href*="hachyderm.io"]:before {
+.social-navigation a[href*="indieweb.social"]:before {
 	content:"\f10a";
 }
 .social-navigation a[href*="bsky.app"]:before {
