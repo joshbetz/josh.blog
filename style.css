@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.3.12
+Version: 4.3.13
 License: GNU General Public License v2 or later
 */
 
@@ -605,22 +605,18 @@ figure.alignfull:last-child {
 }
 
 .social-navigation a {
-	border: 1px solid rgba(0,0,0,.05);
-	border-radius: 50%;
-	color: #1a1a1a;
+	color: var(--base-font-color);
 	display: block;
 	position: relative;
-	height: 40px;
-	width: 40px;
 	text-decoration: none;
+	margin: 3px;
 }
 
 .social-navigation a:before {
 	content: "\f415";
-	height: 38px;
-	width: 38px;
-	line-height: 38px;
 	text-align: center;
+	padding: 2px;
+	border-radius: 2px;
 }
 
 .social-navigation a:hover:before,
@@ -697,6 +693,8 @@ figure.alignfull:last-child {
 }
 .social-navigation a[href*="/feed"]:before {
 	content: "\f413";
+	background-color: #DB7E36;
+	color: white;
 }
 .social-navigation a[href*="hachyderm.io"]:before {
 	content:"\f10a";
