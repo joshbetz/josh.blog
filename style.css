@@ -551,11 +551,11 @@ figure.alignfull:last-child {
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
 	font-family: "social-logos";
-	font-size: 20px;
+	font-size: 24px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
-	line-height: 1;
+	line-height: 20px;
 	speak: none;
 	text-align: center;
 	text-decoration: inherit;
@@ -591,6 +591,34 @@ figure.alignfull:last-child {
 /*
  * Social Navigation
  */
+:root {
+	--color-bluesky: #3B84F6;
+	--color-blogger: #ff5722;
+	--color-eventbrite: #ff8000;
+	--color-facebook: #0866ff;
+	--color-godaddy: #5ea95a;
+	--color-google-plus: #df4a32;
+	--color-instagram: #d93174;
+	--color-linkedin: #0976b4;
+	--color-mastodon: #6364ff;
+	--color-medium: #12100e;
+	--color-nextdoor: #8ed500;
+	--color-pinterest: #cc2127;
+	--color-pocket: #ee4256;
+	--color-print: #f8f8f8;
+	--color-reddit: #5f99cf;
+	--color-skype: #00aff0;
+	--color-stumbleupon: #eb4924;
+	--color-substack: #ff6719;
+	--color-squarespace: #222;
+	--color-telegram: #08c;
+	--color-tumblr: #35465c;
+	--color-twitter: #55acee;
+	--color-whatsapp: #43d854;
+	--color-wix: #faad4d;
+	--color-x: #000;
+}
+
 .social-navigation ul {
 	list-style: none;
 	margin: 0 0 -0.4375em;
@@ -616,7 +644,7 @@ figure.alignfull:last-child {
 	content: "\f415";
 	text-align: center;
 	padding: 2px;
-	border-radius: 2px;
+	border-radius: 3px;
 }
 
 .social-navigation a:hover:before,
@@ -636,6 +664,9 @@ figure.alignfull:last-child {
 .social-navigation a[href*="facebook.com"]:before {
 	content: "\f203";
 }
+.social-navigation a[href*="facebook.com"]:hover:before {
+	color: var(--color-facebook);
+}
 .social-navigation a[href*="flickr.com"]:before {
 	content: "\f211";
 }
@@ -651,8 +682,14 @@ figure.alignfull:last-child {
 .social-navigation a[href*="instagram.com"]:before {
 	content: "\f215";
 }
+.social-navigation a[href*="instagram.com"]:hover:before {
+	color: var(--color-instagram);
+}
 .social-navigation a[href*="linkedin.com"]:before {
 	content: "\f207";
+}
+.social-navigation a[href*="linkedin.com"]:hover:before {
+		color: var(--color-linkedin);
 }
 .social-navigation a[href*="pinterest.com"]:before {
 	content: "\f210";
@@ -669,8 +706,14 @@ figure.alignfull:last-child {
 .social-navigation a[href*="tumblr.com"]:before {
 	content: "\f214";
 }
+.social-navigation a[href*="tumblr.com"]:hover:before {
+		color: var(--color-tumblr);
+}
 .social-navigation a[href*="twitter.com"]:before {
 	content: "\f202";
+}
+.social-navigation a[href*="twitter.com"]:hover:before {
+		color: var(--color-x);
 }
 .social-navigation a[href*="vimeo.com"]:before {
 	content: "\f212";
@@ -693,14 +736,21 @@ figure.alignfull:last-child {
 }
 .social-navigation a[href*="/feed"]:before {
 	content: "\f413";
+	font-size: 20px;
 	background-color: #DB7E36;
 	color: white;
 }
 .social-navigation a[href*="indieweb.social"]:before {
 	content:"\f10a";
 }
+.social-navigation a[href*="indieweb.social"]:hover:before {
+	color: var(--color-mastodon);
+}
 .social-navigation a[href*="bsky.app"]:before {
 	content:"\f10f";
+}
+.social-navigation a[href*="bsky.app"]:hover:before {
+	color: var(--color-bluesky);
 }
 
 /*
