@@ -57,13 +57,8 @@ License: GNU General Public License v2 or later
 	--accent-font-color: #ddd;
 	--background-color: #e3f2f9;
 	--background-accent-color: #d4eef9;
-	--title-accent-color: #559fc6;
 	--primary-accent-color: #559fc6;
 	--secondary-accent-color: #55c6b5;
-
-	--comment-author-color: #1a1a1a;
-
-	--border-color: #d1d1d1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -74,13 +69,8 @@ License: GNU General Public License v2 or later
 		--accent-font-color: #333;
 		--background-color: #144962;
 		--background-accent-color: #105a79;
-		--title-accent-color: #112834;
 		--primary-accent-color: #559fc6;
 		--secondary-accent-color: #55c6b5;
-
-		--comment-author-color: #fff;
-
-		--border-color: #3f3f3f;
 	}
 }
 
@@ -313,7 +303,7 @@ a, a:hover, a:active {
 }
 
 #header .page-title a, #header .page-title a:hover, #header .page-title a:active {
-	color: var(--title-accent-color);
+	color: var(--primary-accent-color);
 }
 
 a:hover {
@@ -838,7 +828,7 @@ figure.alignfull:last-child {
 .comment-list article,
 .comment-list .pingback,
 .comment-list .trackback {
-	border-top: 1px solid var(--border-color);
+	border-top: 1px solid var(--accent-font-color);
 	padding: 1.75em 0;
 }
 
@@ -853,7 +843,7 @@ figure.alignfull:last-child {
 }
 
 .comment-author {
-	color: var(--comment-author-color);
+	color: var(--base-font-color);
 	font-size: 0.8em;
 }
 
@@ -942,7 +932,7 @@ figure.alignfull:last-child {
 }
 
 .comment-reply-link {
-	border: 1px solid var(--border-color);
+	border: 1px solid var(--accent-font-color);
 	border-radius: 4px;
 	color: #007acc;
 	display: inline-block;
@@ -995,7 +985,7 @@ figure.alignfull:last-child {
 }
 
 .no-comments {
-	border-top: 1px solid var(--border-color);
+	border-top: 1px solid var(--accent-font-color);
 	font-weight: 700;
 	margin: 0;
 	padding-top: 1.75em;
@@ -1094,7 +1084,7 @@ input[type="radio"] {
 }
 
 fieldset {
-	border: 1px solid var(--border-color);
+	border: 1px solid var(--accent-font-color);
 	margin: 0 0 1.75em;
 	min-width: inherit;
 	padding: 0.875em;
@@ -1180,7 +1170,7 @@ input[type="number"],
 textarea {
 	background: #f7f7f7;
 	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-	border: 1px solid var(--border-color);
+	border: 1px solid var(--accent-font-color);
 	border-radius: 2px;
 	color: #686868;
 	padding: 0.625em 0.4375em;
