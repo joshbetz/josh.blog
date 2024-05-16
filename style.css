@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.3.20
+Version: 4.3.21
 License: GNU General Public License v2 or later
 */
 
@@ -368,8 +368,8 @@ pre code {
 }
 
 code {
-	padding: 3px 7px;
-	background: #eee;
+	padding: 2px 3px;
+	background: var(--faint-font-color);
 	border-radius: 3px;
 }
 
