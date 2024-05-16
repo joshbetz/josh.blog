@@ -53,8 +53,9 @@ License: GNU General Public License v2 or later
 :root {
 	--html-background-color: #ddd;
 	--body-background-color: #fff;
+	--stark-background-color: #111;
 	--base-font-color: #333;
-	--accent-font-color: #ddd;
+	--accent-font-color: #aaa;
 	--background-color: #e3f2f9;
 	--background-accent-color: #d4eef9;
 	--primary-accent-color: #559fc6;
@@ -65,8 +66,9 @@ License: GNU General Public License v2 or later
 	:root {
 		--html-background-color: #555;
 		--body-background-color: #1a1a1a;
+		--stark-background-color: #eee;
 		--base-font-color: #ddd;
-		--accent-font-color: #333;
+		--accent-font-color: #888;
 		--background-color: #144962;
 		--background-accent-color: #105a79;
 		--primary-accent-color: #559fc6;
@@ -182,7 +184,7 @@ body {
 .entry-footer {
 	font-size: 0.7em;
 	text-decoration: none;
-	color: #999;
+	color: var(--accent-font-color);
 	clear: both;
 }
 
@@ -881,7 +883,7 @@ figure.alignfull:last-child {
 
 .comment-metadata,
 .pingback .edit-link {
-	color: #686868;
+	color: var(--accent-font-color);
 	font-size: 0.6em;
 }
 
@@ -891,14 +893,14 @@ figure.alignfull:last-child {
 
 .comment-metadata a,
 .pingback .comment-edit-link {
-	color: #686868;
+	color: var(--accent-font-color);
 }
 
 .comment-metadata a:hover,
 .comment-metadata a:focus,
 .pingback .comment-edit-link:hover,
 .pingback .comment-edit-link:focus {
-	color: #007acc;
+	color: var(--secondary-accent-color);
 }
 
 .comment-metadata .edit-link,
@@ -932,7 +934,7 @@ figure.alignfull:last-child {
 .comment-reply-link {
 	border: 1px solid var(--accent-font-color);
 	border-radius: 4px;
-	color: #007acc;
+	color: var(--primary-accent-color);
 	display: inline-block;
 	font-size: 0.8em;
 	line-height: 1;
@@ -944,7 +946,7 @@ figure.alignfull:last-child {
 .comment-reply-link:hover,
 .comment-reply-link:focus {
 	border-color: currentColor;
-	color: #007acc;
+	color: var(--secondary-accent-color);
 	outline: 0;
 }
 
@@ -953,7 +955,7 @@ figure.alignfull:last-child {
 }
 
 .comment-form label {
-	color: #686868;
+	color: var(--accent-font-color);
 	display: block;
 	font-size: 0.8em;
 	letter-spacing: 0.076923077em;
@@ -976,7 +978,7 @@ figure.alignfull:last-child {
 .comment-awaiting-moderation,
 .logged-in-as,
 .form-allowed-tags {
-	color: #686868;
+	color: var(--accent-font-color);
 	font-size: 0.8em;
 	line-height: 1.6153846154;
 	margin-bottom: 2.1538461538em;
@@ -1003,7 +1005,7 @@ figure.alignfull:last-child {
 }
 
 .required {
-	color: #007acc;
+	color: red;
 	font-family: Merriweather, Georgia, serif;
 }
 
@@ -1021,7 +1023,7 @@ figure.alignfull:last-child {
 
 .comment-reply-title small a:hover,
 .comment-reply-title small a:focus {
-	color: #1a1a1a;
+	color: var(--stark-background-color);
 }
 
 .comment-reply-title small a:before {
@@ -1123,10 +1125,10 @@ input[type="reset"][disabled]:focus,
 input[type="submit"],
 input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus {
-	background: #1a1a1a;
+	background: var(--stark-background-color);
 	border: 0;
 	border-radius: 2px;
-	color: #fff;
+	color: var(--body-background-color);
 	font-weight: 700;
 	letter-spacing: 0.046875em;
 	line-height: 1;
@@ -1142,7 +1144,7 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-	background: #007acc;
+	background: var(--primary-accent-color);
 }
 
 button:focus,
@@ -1166,12 +1168,11 @@ input[type="search"],
 input[type="tel"],
 input[type="number"],
 textarea {
-	background: #f7f7f7;
-	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+	background: var(--body-background-color);
 	border: 1px solid var(--accent-font-color);
-	border-radius: 2px;
-	color: #686868;
-	padding: 0.625em 0.4375em;
+	border-radius: 3px;
+	color: var(--accent-font-color);
+	padding: 0.75em;
 	width: 100%;
 }
 
@@ -1188,9 +1189,9 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="number"]:focus,
 textarea:focus {
-	background-color: #fff;
-	border-color: #007acc;
-	color: #1a1a1a;
+	background-color: var(--body-background-color);
+	border-color: var(--accent-font-color);
+	color: var(--base-font-color);
 	outline: 0;
 }
 
@@ -1199,7 +1200,7 @@ textarea:focus {
 }
 
 .post-password-form label {
-	color: #686868;
+	color: var(--accent-font-color);
 	display: block;
 	font-size: 13px;
 	font-size: 0.8125rem;
