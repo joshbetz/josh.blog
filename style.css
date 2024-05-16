@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.3.18
+Version: 4.3.19
 License: GNU General Public License v2 or later
 */
 
@@ -56,6 +56,7 @@ License: GNU General Public License v2 or later
 	--stark-background-color: #111;
 	--base-font-color: #333;
 	--accent-font-color: #aaa;
+	--faint-font-color: #ddd;
 	--background-color: #e3f2f9;
 	--background-accent-color: #d4eef9;
 	--primary-accent-color: #559fc6;
@@ -69,6 +70,7 @@ License: GNU General Public License v2 or later
 		--stark-background-color: #eee;
 		--base-font-color: #ddd;
 		--accent-font-color: #888;
+		--faint-font-color: #333;
 		--background-color: #144962;
 		--background-accent-color: #105a79;
 		--primary-accent-color: #559fc6;
@@ -207,7 +209,7 @@ article.post:not(:last-child)::after {
 	content: "\2605 \2605 \2605";
 	font-family: "Osaka", "Zapf Dingbats";
 	display: block;
-	color: var(--accent-font-color);
+	color: var(--faint-font-color);
 	text-align: center;
 	margin: 4rem;
 	letter-spacing: 2rem;
