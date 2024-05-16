@@ -434,6 +434,11 @@ img {
 	display: block;
 }
 
+.wp-block-image figcaption {
+	font-weight: bold;
+	color: var(--base-font-color);
+}
+
 img.featured-image,
 figure.alignwide {
 	width: 130%;
