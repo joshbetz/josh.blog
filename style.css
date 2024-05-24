@@ -55,12 +55,12 @@ License: GNU General Public License v2 or later
 	--body-background-color: #fff;
 	--stark-background-color: #111;
 	--base-font-color: #333;
-	--accent-font-color: #aaa;
-	--faint-font-color: #e4eee4;
+	--accent-font-color: #19381F;
+	--faint-font-color: #519872;
 	--background-color: #e3f2f9;
-	--background-accent-color: #d4eef9;
-	--primary-accent-color: #E07A5F;
-	--secondary-accent-color: #3D405B;
+	--background-accent-color: #c6e7f5;
+	--primary-accent-color: #543DA7;
+	--secondary-accent-color: #256EFF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -72,7 +72,7 @@ License: GNU General Public License v2 or later
 		--accent-font-color: #888;
 		--faint-font-color: #333;
 		--background-color: #144962;
-		--background-accent-color: #105a79;
+		--background-accent-color: #02374e;
 	}
 }
 
@@ -112,7 +112,7 @@ body {
 }
 
 #header {
-	background-color: var(--background-color);
+	background: linear-gradient(27deg, var(--background-accent-color) 0%, var(--background-color) 30%, var(--background-color) 70%, var(--background-accent-color) 100%);
 	border-bottom: solid 2px var(--background-accent-color);
 	padding: 1rem;
 }
@@ -312,11 +312,13 @@ a, a:hover, a:active {
 	color: var(--primary-accent-color);
 }
 
-#header .page-title a, #header .page-title a:hover, #header .page-title a:active {
-	color: var(--primary-accent-color);
+footer a,
+#header a {
+	color: var(--base-font-color);
 }
 
-a:hover {
+footer a:hover,
+#header a:hover, a:hover {
 	color: var(--secondary-accent-color);
 }
 
