@@ -17,8 +17,11 @@
 
 	<div id="header">
 		<div class="content">
-			<h1 class="page-title"><?php echo get_avatar( get_option( 'admin_email' ), 60 ) ;?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<p class="page-description"><?php echo get_bloginfo( 'description' ); ?></p>
+			<header>
+				<?php echo get_avatar( get_option( 'admin_email' ), 60 ) ;?>
+				<h1 class="page-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<p class="page-description"><?php echo get_bloginfo( 'description' ); ?></p>
+			</header>
 
 			<?php if ( has_nav_menu( 'main' ) || has_nav_menu( 'social' ) ) : ?>
 				<div id="site-header-menu" class="site-header-menu">
