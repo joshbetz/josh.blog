@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.5
+Version: 4.5.1
 License: GNU General Public License v2 or later
 */
 
@@ -55,11 +55,11 @@ License: GNU General Public License v2 or later
 	--body-background-color: #fff;
 	--stark-background-color: #111;
 	--base-font-color: #333;
-	--accent-font-color: #19381F;
-	--faint-font-color: #519872;
+	--accent-font-color: #B8B8B8;
+	--faint-font-color: #E3DFF1;
 	--background-color: #e3f2f9;
 	--background-accent-color: #c6e7f5;
-	--primary-accent-color: #543DA7;
+	--primary-accent-color: #7C66CD;
 	--secondary-accent-color: #256EFF;
 }
 
@@ -376,16 +376,13 @@ code {
 	padding: 2px 3px;
 	background: var(--faint-font-color);
 	border-radius: 3px;
+	font-size: 0.9em;
 }
 
 pre {
 	padding: 10px;
 	overflow-x: scroll;
 	font-size: 0.75em;
-}
-
-p code {
-	color: var(--base-font-color);
 }
 
 .wp-block-code code {
