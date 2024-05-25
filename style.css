@@ -135,6 +135,7 @@ body {
 	font-size: 3rem;
 	line-height: 1.1;
 	margin: 0;
+	padding-top: 6px;
 }
 
 #header .page-description,
@@ -857,12 +858,13 @@ figure.alignfull:last-child {
 
 .avatar {
 	line-height: 4rem;
-	width: 60px;
-	height: 60px;
+	width: 66px;
+	height: 66px;
 	border-radius: 50%;
 	margin-right: 2rem;
 	position: relative;
 	float: left;
+	border: solid 3px var(--background-accent-color);
 }
 
 .comment-author .avatar {
