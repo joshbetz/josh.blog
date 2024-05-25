@@ -352,9 +352,9 @@ h1.entry-title {
 }
 
 blockquote, .wp-block-quote {
-	border-left: solid 5px rgba(0,0,0,.2);
+	border-left: solid 2px var(--primary-accent-color);
 	padding-left: 2rem;
-	margin: 2em 0 2em 2rem;
+	margin: 2em 0 2em 1rem;
 	font-size: 90%;
 }
 
