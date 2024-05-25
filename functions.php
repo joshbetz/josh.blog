@@ -130,11 +130,15 @@ if ( ! function_exists( '_s_entry_footer' ) ) :
 				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator' ) );
-			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			$tags = get_the_tags();
+			if (!empty($tags)) {
+				$tag_list = array();
+				foreach ($tags as $tag) {
+					$tag_link = get_tag_link($tag->term_id);
+					$tag_list[] = '<a href="' . esc_url($tag_link) . '">#' . esc_html($tag->name) . '</a>';
+				}
+
+				echo '<span class="tags-links">' . join(', ', $tag_list) . '</span>';
 			}
 		}
 
