@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.5.6
+Version: 4.5.7
 License: GNU General Public License v2 or later
 */
 
@@ -370,6 +370,8 @@ h1.entry-title a {
 	#476098 66.666%, 
 	#476098 83.333%, 
 	#A7489B 83.333%);
+
+	display: inline-block;
 
 	/* Set the background size and repeat properties. */
 	background-size: 100%;
