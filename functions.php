@@ -105,6 +105,10 @@ if ( ! function_exists( '_s_posted_by' ) ) :
 	 * Prints HTML with meta information for the current author.
 	 */
 	function _s_posted_by() {
+		if ( apply_filters( 'joshbetz_hide_byline', true ) ) {
+			return;
+		}
+
 		$byline = sprintf(
 			/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author' ),
