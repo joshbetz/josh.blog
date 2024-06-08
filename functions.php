@@ -1,9 +1,9 @@
 <?php
 
 add_action( 'wp_enqueue_scripts', function() {
+	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', [], wp_get_theme()->get( 'Version' ) );
 	wp_enqueue_style( 'social-logos', get_template_directory_uri() . '/icon-font/social-logos.css', [], wp_get_theme()->get( 'Version' ) );
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', [], wp_get_theme()->get( 'Version' ) );
-	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', [ 'genericons', 'social-logos' ], wp_get_theme()->get( 'Version' ) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
