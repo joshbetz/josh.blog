@@ -7,7 +7,12 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" type="image/png">
+
 	<link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/montserrat-v18-latin-regular.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+	<link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/montserrat-v18-latin-italic.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+	<link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/montserrat-v18-latin-600.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+	<link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/montserrat-v18-latin-600italic.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+
 	<meta name="theme-color" content="#e3f2f9" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#144962" media="(prefers-color-scheme: dark)">
 
