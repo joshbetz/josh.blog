@@ -1,7 +1,5 @@
 <?php
 
-require_once __DIR__ . '/encute.php';
-
 add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', [], wp_get_theme()->get( 'Version' ) );
 
