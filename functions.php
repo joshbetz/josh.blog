@@ -191,3 +191,16 @@ add_filter( 'the_title', function( $title ) {
 
 	return substr_replace( $title, "\xC2\xA0", $last_space, 1 );
 } );
+
+add_filter( 'activitypub_object_content_template', function( $template, $post ) {
+	$format = get_post_format( $post );
+	switch ( $format ) {
+	case 'aside':
+	case 'status':
+	case 'link':
+	case 'image':
+		return "[ap_content]\n\n[ap_permalink type=\"html\"]\n\n[ap_hashtags]";
+	}
+
+	return $template;
+}, 10, 2 );
