@@ -1,7 +1,9 @@
 <?php
 
 add_action( 'wp_enqueue_scripts', function() {
-	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . '/style.css', [], wp_get_theme()->get( 'Version' ) );
+	// Use minified libraries if SCRIPT_DEBUG is turned off
+	$min = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	wp_enqueue_style( 'josh.blog', get_template_directory_uri() . sprintf( '/style%s.css', $min ), [], wp_get_theme()->get( 'Version' ) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
