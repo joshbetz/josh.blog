@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/encute.php';
+
 add_action( 'wp_enqueue_scripts', function() {
 	// Use minified libraries if SCRIPT_DEBUG is turned off
 	$min = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
