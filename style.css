@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.6.2
+Version: 4.6.3
 License: GNU General Public License v2 or later
 */
 
@@ -1226,15 +1226,17 @@ input[type="submit"][disabled]:focus {
 	text-transform: uppercase;
 }
 
-button:hover,
-button:focus,
-input[type="button"]:hover,
-input[type="button"]:focus,
-input[type="reset"]:hover,
-input[type="reset"]:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-	background: var(--primary-accent-color);
+form {
+	button:hover,
+	button:focus,
+	input[type="button"]:hover,
+	input[type="button"]:focus,
+	input[type="reset"]:hover,
+	input[type="reset"]:focus,
+	input[type="submit"]:hover,
+	input[type="submit"]:focus {
+		background: var(--primary-accent-color);
+	}
 }
 
 button:focus,
