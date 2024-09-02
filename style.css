@@ -210,6 +210,14 @@ body {
 	clear: both;
 }
 
+.posted-on:before {
+	font-family: "Genericons";
+	content: "\f307";
+	vertical-align: -0.2em;
+	font-size: 1.2em;
+	line-height:1;
+}
+
 .entry-footer {
 	margin-top: 1rem;
 }
