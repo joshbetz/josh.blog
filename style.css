@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.6.4
+Version: 4.6.5
 License: GNU General Public License v2 or later
 */
 
@@ -203,7 +203,8 @@ body {
 
 .entry-meta,
 .entry-footer {
-	font-size: 0.7em;
+	font-size: 0.8em;
+	padding-top: 1em;
 	text-decoration: none;
 	color: var(--accent-font-color);
 	clear: both;
