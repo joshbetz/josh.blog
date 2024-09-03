@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.6.6
+Version: 4.6.7
 License: GNU General Public License v2 or later
 */
 
@@ -216,6 +216,16 @@ body {
 	vertical-align: -0.2em;
 	font-size: 1.2em;
 	line-height:1;
+	padding-right: 0.2em;
+}
+
+.cat-links:before {
+	font-family: "Genericons";
+	content: "\f475";
+	vertical-align: -0.2em;
+	font-size: 1.2em;
+	line-height:1;
+	padding-right: 0.2em;
 }
 
 .entry-footer {
