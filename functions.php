@@ -206,3 +206,11 @@ add_filter( 'activitypub_object_content_template', function( $template, $post ) 
 
 	return $template;
 }, 10, 2 );
+
+add_filter('wp_resource_hints', function( $urls, $relation_type) {
+    if ($relation_type === 'dns-prefetch') {
+        $urls[] = "https://secure.gravatar.com";
+    }
+
+    return $urls;
+}, 10, 2);
