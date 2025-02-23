@@ -11,10 +11,8 @@ License: GNU General Public License v2 or later
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
-	font-display: fallback;
 	src: local(''),
-		url('fonts/montserrat-v18-latin-regular.woff2') format('woff2'),
-		url('fonts/montserrat-v18-latin-regular.woff') format('woff');
+		url('fonts/montserrat-v18-latin-regular.woff2') format('woff2');
 }
 
 /* montserrat-italic - latin */
@@ -22,10 +20,9 @@ License: GNU General Public License v2 or later
 	font-family: 'Montserrat';
 	font-style: italic;
 	font-weight: 400;
-	font-display: swap;
+	font-display: optional;
 	src: local(''),
-		url('fonts/montserrat-v18-latin-italic.woff2') format('woff2'),
-		url('fonts/montserrat-v18-latin-italic.woff') format('woff');
+		url('fonts/montserrat-v18-latin-italic.woff2') format('woff2');
 }
 
 /* montserrat-600 - latin */
@@ -33,10 +30,9 @@ License: GNU General Public License v2 or later
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 600;
-	font-display: swap;
+	font-display: optional;
 	src: local(''),
-		url('fonts/montserrat-v18-latin-600.woff2') format('woff2'),
-		url('fonts/montserrat-v18-latin-600.woff') format('woff');
+		url('fonts/montserrat-v18-latin-600.woff2') format('woff2');
 }
 
 /* montserrat-600italic - latin */
@@ -44,10 +40,9 @@ License: GNU General Public License v2 or later
 	font-family: 'Montserrat';
 	font-style: italic;
 	font-weight: 600;
-	font-display: swap;
+	font-display: optional;
 	src: local(''),
-		url('fonts/montserrat-v18-latin-600italic.woff2') format('woff2'),
-		url('fonts/montserrat-v18-latin-600italic.woff') format('woff');
+		url('fonts/montserrat-v18-latin-600italic.woff2') format('woff2');
 }
 
 :root {
