@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.7.2
+Version: 4.7.3
 License: GNU General Public License v2 or later
 */
 
@@ -11,6 +11,7 @@ License: GNU General Public License v2 or later
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
+	font-display: swap;
 	src: local(''),
 		url('fonts/montserrat-v18-latin-regular.woff2') format('woff2');
 }
