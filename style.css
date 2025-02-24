@@ -3,15 +3,47 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.7.5
+Version: 4.7.4
 License: GNU General Public License v2 or later
 */
 
 @font-face {
 	font-family: 'Montserrat';
-	font-weight: 100 1000;
+	font-style: normal;
+	font-weight: 400;
 	font-display: swap;
-	src: url('fonts/Montserrat[wght].woff2') format('woff2-variations');
+	src: local(''),
+		url('fonts/montserrat-v18-latin-regular.woff2') format('woff2');
+}
+
+/* montserrat-italic - latin */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: italic;
+	font-weight: 400;
+	font-display: optional;
+	src: local(''),
+		url('fonts/montserrat-v18-latin-italic.woff2') format('woff2');
+}
+
+/* montserrat-600 - latin */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-display: optional;
+	src: local(''),
+		url('fonts/montserrat-v18-latin-600.woff2') format('woff2');
+}
+
+/* montserrat-600italic - latin */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: italic;
+	font-weight: 600;
+	font-display: optional;
+	src: local(''),
+		url('fonts/montserrat-v18-latin-600italic.woff2') format('woff2');
 }
 
 :root {
