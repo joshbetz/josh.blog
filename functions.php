@@ -34,6 +34,9 @@ add_action( 'after_setup_theme', function() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+	// Add support for Block Styles.
+	add_theme_support( 'wp-block-styles' );
+
 	// Add support for full and wide align images.
 	add_theme_support( 'align-wide' );
 
