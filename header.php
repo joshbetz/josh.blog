@@ -14,9 +14,6 @@
 
 	<?php // preload the fallback font ?>
 	<link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/montserrat-v18-latin-regular.woff2" crossorigin="anonymous" as="font" type="font/woff2">
-	<style id="critical-css">
-		<?php require get_template_directory() . '/critical.css.php'; ?>
-	</style>
 
 	<meta name="theme-color" content="#e3f2f9" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#144962" media="(prefers-color-scheme: dark)">
