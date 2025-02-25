@@ -1,5 +1,20 @@
 <?php
 
+// Defer non-critical styles
+add_filter( 'style_loader_tag', function($html, $handle, $href, $media) {
+	if ( ! in_array( $handle, ['josh.blog'] ) ) {
+		return $html;
+	}
+
+	$html = sprintf(
+		'<link rel="stylesheet" id="%s-css" href="%s" media="print" onload="this.media=\'all\'">',
+		esc_attr($handle),
+		esc_url($href)
+	);
+
+    return $html;
+}, 10, 4 );
+
 add_action( 'wp_enqueue_scripts', function() {
 	// Use minified libraries if SCRIPT_DEBUG is turned off
 	$min = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
