@@ -1,5 +1,15 @@
 <?php
 
+use CWS\Encute\Plugin;
+use CWS\Encute\Script;
+use CWS\Encute\Style;
+
+// critical css is inlined, so we defer the main stylesheet to lower the priority
+add_action(Plugin::class, function (Plugin $encute) {
+        Style::get('josh.blog')
+                ->defer();
+});
+
 add_action( 'wp_enqueue_scripts', function() {
 	// Use minified libraries if SCRIPT_DEBUG is turned off
 	$min = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
