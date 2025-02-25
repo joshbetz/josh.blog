@@ -7,7 +7,8 @@ use CWS\Encute\Style;
 // critical css is inlined, so we defer the main stylesheet to lower the priority
 add_action(Plugin::class, function (Plugin $encute) {
         Style::get('josh.blog')
-                ->defer();
+		->defer()
+		->footer();
 });
 
 add_action( 'wp_enqueue_scripts', function() {
