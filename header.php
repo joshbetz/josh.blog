@@ -28,7 +28,7 @@
 	<div id="header">
 		<div class="content">
 			<header>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo get_avatar( get_option( 'admin_email' ), 66, '', '', [] ) ;?></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="Home"><?php echo get_avatar( get_option( 'admin_email' ), 66, '', '', [] ) ;?></a>
 				<h1 class="page-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<p class="page-description"><?php echo get_bloginfo( 'description' ); ?></p>
 			</header>
