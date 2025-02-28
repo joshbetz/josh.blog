@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx postcss style.css > style.min.css"
+    "build:critical": "curl https://josh.blog | npx critical -c style.css --width 1300 --height 900 > critical.css.php",
+    "build:css": "npx postcss style.css > style.min.css",
+    "build": "npm run build:css && npm run build:critical"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cssnano": "^7.0.2",
+    "critical": "^7.2.1",
+    "cssnano": "^7.0.6",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0"
   }
