@@ -939,7 +939,7 @@ figure.alignfull:last-child {
 
 .bypostauthor > article .fn {
 	position: relative;
-	padding-left: 20px;
+	padding-left: 22px;
 }
 
 .bypostauthor > article .fn:before,
@@ -1015,7 +1015,8 @@ figure.alignfull:last-child {
 }
 
 .comment-reply-link {
-	border: 1px solid var(--accent-font-color);
+	font-weight: bold;
+	border: 1px solid var(--faint-font-color);
 	border-radius: 4px;
 	color: var(--primary-accent-color);
 	display: inline-block;
@@ -1099,9 +1100,7 @@ figure.alignfull:last-child {
 .comment-reply-title small a {
 	border: 0;
 	float: right;
-	height: 32px;
 	overflow: hidden;
-	width: 26px;
 }
 
 .comment-reply-title small a:hover,
