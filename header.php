@@ -15,6 +15,39 @@
 	<?php // preload the fallback font ?>
 	<link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/montserrat-v18-latin-regular.woff2" crossorigin="anonymous" as="font" type="font/woff2">
 	<style id="critical-css">
+		@font-face {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: local(''),
+				url('<?php echo get_stylesheet_directory_uri(); ?>/fonts/montserrat-v18-latin-regular.woff2') format('woff2');
+		}
+		@font-face {
+			font-family: 'Montserrat';
+			font-style: italic;
+			font-weight: 400;
+			font-display: optional;
+			src: local(''),
+				url('<?php echo get_stylesheet_directory_uri(); ?>/fonts/montserrat-v18-latin-italic.woff2') format('woff2');
+		}
+		@font-face {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 600;
+			font-display: optional;
+			src: local(''),
+				url('<?php echo get_stylesheet_directory_uri(); ?>/fonts/montserrat-v18-latin-600.woff2') format('woff2');
+		}
+		@font-face {
+			font-family: 'Montserrat';
+			font-style: italic;
+			font-weight: 600;
+			font-display: optional;
+			src: local(''),
+				url('<?php echo get_stylesheet_directory_uri(); ?>/fonts/montserrat-v18-latin-600italic.woff2') format('woff2');
+		}
+
 		<?php require get_template_directory() . '/critical.css.php'; ?>
 	</style>
 
