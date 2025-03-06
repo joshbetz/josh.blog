@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:critical": "curl https://josh.blog | npx critical -c style.css --width 1300 --height 900 > critical.css.php",
+    "build:critical": "curl https://josh.blog/about-me | npx critical -c style.css --width 1300 --height 900 > critical.css.php",
     "build:css": "npx postcss style.css > style.min.css",
     "build": "npm run build:css && npm run build:critical"
   },
