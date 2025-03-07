@@ -1,6 +1,17 @@
 {
   "version": 2,
+  "settings": {
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1200px"
+    }
+  },
   "styles": {
+    "typography": {
+      "fontFamily": "Montserrat, Verdana, sans-serif",
+      "fontSize": "16px",
+      "lineHeight": "1.5"
+    },
     "blocks": {
       "core/code": {
         "border": {
