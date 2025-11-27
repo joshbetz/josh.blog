@@ -3,17 +3,17 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.7.10
+Version: 4.8
 License: GNU General Public License v2 or later
 */
 
 :root {
 	--system-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	--html-background-color: #ddd;
+	--html-background-color: #f2f6f8;
 	--body-background-color: #fff;
 	--stark-background-color: #111;
-	--base-font-color: #333;
-	--accent-font-color: #757575;
+	--base-font-color: #222;
+	--accent-font-color: #666;
 	--faint-font-color: #E9E9E9;
 	--background-color: #e3f2f9;
 	--background-accent-color: #c6e7f5;
@@ -23,11 +23,11 @@ License: GNU General Public License v2 or later
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--html-background-color: #555;
-		--body-background-color: #1a1a1a;
+		--html-background-color: #02070f;
+		--body-background-color: #07101b;
 		--stark-background-color: #eee;
-		--base-font-color: #ddd;
-		--accent-font-color: #828282;
+		--base-font-color: #e6e6e6;
+		--accent-font-color: #8d8d8d;
 		--faint-font-color: #333;
 		--background-color: #144962;
 		--background-accent-color: #02374e;
@@ -62,6 +62,16 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+/* Transition for dark mode switch */
+body,
+body * {
+  transition:
+    background-color 150ms ease-out,
+    color 150ms ease-out,
+    border-color 150ms ease-out,
+    box-shadow 150ms ease-out;
+}
+
 .wrapper {
 	overflow: hidden;
 }
@@ -73,15 +83,86 @@ body {
 }
 
 #header {
-	background: linear-gradient(27deg, var(--background-accent-color) 0%, var(--background-color) 30%, var(--background-color) 70%, var(--background-accent-color) 100%);
-	border-bottom: solid 2px var(--background-accent-color);
+	background: linear-gradient(
+		27deg,
+		color-mix(in srgb, var(--background-accent-color) 70%, white) 0%,
+		var(--background-color) 35%,
+		var(--background-color) 65%,
+		color-mix(in srgb, var(--background-accent-color) 70%, white) 100%
+	);
+	border-bottom: 1px solid color-mix(in srgb, var(--background-accent-color) 60%, white);
 	padding: min(1vw, 1rem) 0;
 }
 
 #colophon {
-	color: var(--base-font-color);
-	background-color: var(--background-color);
-	border-top: solid 2px var(--background-accent-color);
+    background:
+      linear-gradient(
+        to top,
+        color-mix(in srgb, var(--background-color) 80%, white) 0%,
+        color-mix(in srgb, var(--background-color) 40%, white) 60%,
+        transparent 100%
+      );
+    border-top: 1px solid color-mix(in srgb, var(--background-accent-color) 60%, white);
+  }
+
+@media (prefers-color-scheme: dark) {
+	#header {
+		background:
+		/* broad, low-intensity aurora fog across the top */
+		radial-gradient(
+		circle at 50% -10%,
+		rgba(90, 150, 255, 0.18) 0,
+		rgba(90, 150, 255, 0.05) 40%,
+		rgba(90, 150, 255, 0) 70%
+		),
+
+		/* very soft purple haze left */
+		radial-gradient(
+		circle at 15% 5%,
+		rgba(130, 80, 180, 0.16) 0,
+		rgba(130, 80, 180, 0.03) 40%,
+		rgba(130, 80, 180, 0) 70%
+		),
+
+		/* very soft green haze right (much less than before) */
+		radial-gradient(
+		circle at 85% 8%,
+		rgba(60, 170, 120, 0.12) 0,
+		rgba(60, 170, 120, 0.02) 40%,
+		rgba(60, 170, 120, 0) 70%
+		),
+
+		/* subtle pink tint overlapping center-left */
+		radial-gradient(
+		circle at 35% 8%,
+		rgba(255, 120, 165, 0.13) 0,
+		rgba(255, 120, 165, 0.03) 42%,
+		rgba(255, 120, 165, 0) 72%
+		),
+
+		/* main diagonal band with very dark edges */
+		linear-gradient(
+		135deg,
+		#00040a 0%,
+		#031323 22%,
+		#083048 50%,
+		#101f32 78%,
+		#00040a 100%
+		);
+
+		border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+		padding: min(1vw, 1rem) 0;
+	}
+
+	#header .avatar {
+		border-color: rgba(198, 231, 245, 0.6);
+	}
+
+	#colophon {
+		background: #07101b; /* or your chosen body color */
+		border-top: 1px solid rgba(255, 255, 255, 0.12);
+		color: var(--base-font-color);
+	}
 }
 
 #colophon .main-navigation,
@@ -279,8 +360,11 @@ article.post:not(:last-child)::after {
 /*
  * Text
  */
-a, a:hover, a:active {
+a {
 	color: var(--primary-accent-color);
+}
+a:hover {
+	color: var(--secondary-accent-color);
 }
 
 footer a,
@@ -387,10 +471,10 @@ h1.entry-title a:hover {
 }
 
 blockquote, .wp-block-quote {
-	border-left: solid 2px var(--primary-accent-color);
-	padding-left: 2rem;
-	margin: 2em 0 2em 1rem;
-	font-size: 90%;
+	border-left: 3px solid var(--primary-accent-color);
+	background: rgba(0, 0, 0, 0.03);
+	padding: 1rem 1.5rem;
+	border-radius: 6px;
 }
 
 blockquote cite {
