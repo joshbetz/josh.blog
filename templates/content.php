@@ -15,8 +15,8 @@
 	<?php endif; ?>
 </header>
 
-<?php if ( $url = get_the_post_thumbnail_url() ): ?>
-	<img class="featured-image" src="<?php echo esc_url( $url ) ?>" />
+<?php if ( has_post_thumbnail() ): ?>
+	<?php the_post_thumbnail( 'featured-wide', [ 'class' => 'featured-image' ] ); ?>
 <?php endif; ?>
 
 <div class="post-content"><?php the_content(); ?></div>

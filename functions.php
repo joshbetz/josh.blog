@@ -7,9 +7,11 @@ add_filter( 'style_loader_tag', function($html, $handle, $href, $media) {
 	}
 
 	$html = sprintf(
-		'<link rel="stylesheet" id="%s-css" href="%s" media="print" onload="this.media=\'all\'">',
+		'<link rel="stylesheet" id="%1$s-css" href="%2$s" media="print" onload="this.media=\'all\'">' .
+		'<noscript><link rel="stylesheet" id="%1$s-css-noscript" href="%2$s" media="%3$s"></noscript>',
 		esc_attr($handle),
-		esc_url($href)
+		esc_url($href),
+		esc_attr($media ?: 'all')
 	);
 
     return $html;
@@ -41,7 +43,7 @@ add_action( 'after_setup_theme', function() {
 
 	// Add support for Post Thumbnails
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( '8000', '2000' );
+	add_image_size( 'featured-wide', 1600, 0, false );
 
 	// Let WordPress manage the document title
 	add_theme_support( 'title-tag' );
