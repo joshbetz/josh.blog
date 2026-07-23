@@ -60,7 +60,20 @@
 	<div id="header">
 		<div class="content">
 			<header>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="Home"><?php echo get_avatar( get_option( 'admin_email' ), 66, '', '', [] ) ;?></a>
+				<?php
+					$avatar_url = get_theme_file_uri( '/avatar.png' );
+					$avatar_src = $avatar_url;
+					$avatar_srcset = '';
+
+					if ( function_exists( '\\Imgproxy\\imgproxy' ) ) {
+						$avatar_src = \Imgproxy\imgproxy()->image( $avatar_url )->resize( 66, 66 )->url();
+						$avatar_src_2x = \Imgproxy\imgproxy()->image( $avatar_url )->resize( 132, 132 )->url();
+						$avatar_srcset = sprintf( '%s 1x, %s 2x', $avatar_src, $avatar_src_2x );
+					}
+				?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="Home">
+					<img class="avatar" src="<?php echo esc_url( $avatar_src ); ?>"<?php if ( $avatar_srcset ) : ?> srcset="<?php echo esc_attr( $avatar_srcset ); ?>"<?php endif; ?> width="66" height="66" alt="" decoding="async">
+				</a>
 				<h1 class="page-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<p class="page-description"><?php echo get_bloginfo( 'description' ); ?></p>
 			</header>
