@@ -50,9 +50,6 @@
 		<?php require get_template_directory() . '/critical.css.php'; ?>
 	</style>
 
-	<meta name="theme-color" content="#e3f2f9" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#144962" media="(prefers-color-scheme: dark)">
-
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
