@@ -7,13 +7,12 @@
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		}
 	?>
-
-	<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php _s_posted_on(); ?>
-			<?php _s_posted_by(); ?>
-		</div>
-	<?php endif; ?>
 </header>
 
 <div class="post-content"><?php the_content(); ?></div>
+
+<footer class="entry-footer">
+	<?php if ( 'post' === get_post_type() ) : ?>
+		<?php _s_posted_on(); ?>
+	<?php endif; ?>
+</footer>

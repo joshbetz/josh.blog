@@ -107,42 +107,18 @@ if ( ! function_exists( '_s_posted_on' ) ) :
 	 */
 	function _s_posted_on() {
 		$time_string = posted_on_time_string();
-		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
+		$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 endif;
 
-if ( ! function_exists( '_s_posted_by' ) ) :
-	/**
-	 * Prints HTML with meta information for the current author.
-	 */
-	function _s_posted_by() {
-		if ( apply_filters( 'joshbetz_hide_byline', true ) ) {
-			return;
-		}
-
-		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);
-
-		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
-	}
-endif;
-
 if ( ! function_exists( '_s_entry_footer' ) ) :
 	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
+	 * Prints HTML with meta information for the date, categories, tags and comments.
 	 */
 	function _s_entry_footer() {
-		// Hide category and tag text for pages.
+		// Show the date, categories and tags only for posts.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ' ) );
@@ -161,6 +137,8 @@ if ( ! function_exists( '_s_entry_footer' ) ) :
 
 				echo '<span class="tags-links">' . join(', ', $tag_list) . '</span>';
 			}
+
+			_s_posted_on();
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {

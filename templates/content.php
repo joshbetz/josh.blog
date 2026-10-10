@@ -6,13 +6,6 @@
 			the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 		endif;
 	?>
-
-	<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php _s_posted_on(); ?>
-			<?php _s_posted_by(); ?>
-		</div>
-	<?php endif; ?>
 </header>
 
 <?php if ( has_post_thumbnail() ): ?>
