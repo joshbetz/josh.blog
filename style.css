@@ -3,7 +3,7 @@ Theme Name: josh.blog
 Theme URI: https://josh.blog/
 Author: Josh Betz
 Author URI: https://josh.blog/
-Version: 4.8.6
+Version: 4.8.7
 License: GNU General Public License v2 or later
 */
 
@@ -428,7 +428,7 @@ h1.entry-title a:focus-visible {
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: rainbow-text-animation 3s ease-in-out infinite alternate;
+	animation: rainbow-text-animation 0.5s ease-in-out forwards;
 }
 
 @keyframes rainbow-text-animation {
