@@ -55,7 +55,7 @@
 <body <?php body_class(); ?>>
 
 	<div id="header">
-		<div class="content">
+		<div class="content has-global-padding">
 			<header>
 				<?php
 					$avatar_url = get_theme_file_uri( '/avatar.png' );

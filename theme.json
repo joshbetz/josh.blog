@@ -2,9 +2,10 @@
   "version": 2,
   "settings": {
     "layout": {
-      "contentSize": "800px",
-      "wideSize": "1200px"
-    }
+      "contentSize": "calc(60ch - 40px)",
+      "wideSize": "calc(78ch - 52px)"
+    },
+    "useRootPaddingAwareAlignments": true
   },
   "styles": {
     "typography": {
@@ -15,6 +16,14 @@
         "border": {
           "width": "0"
         }
+      }
+    },
+    "spacing": {
+      "padding": {
+        "top": "0",
+        "right": "20px",
+        "bottom": "0",
+        "left": "20px"
       }
     }
   }

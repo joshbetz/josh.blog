@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="wrapper">
-	<div class="content">
+	<div class="content has-global-padding">
 		<?php the_archive_title( '<h1 class="archive-title">', '</h1>' ); ?>
 
 		<?php if ( have_posts() ): ?>
@@ -15,7 +15,7 @@
 </div>
 
 <nav class="page-navigation">
-	<div class="nav-links content">
+	<div class="nav-links content has-global-padding">
 		<div class="nav-previous"><?php previous_posts_link( '&lsaquo;&nbsp;Previous Page' ); ?></div>
 		<div class="nav-next"><?php next_posts_link( 'Next Page&nbsp;&rsaquo;' ); ?></div>
 	</div>

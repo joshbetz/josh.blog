@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="wrapper">
-	<div class="content">
+	<div class="content has-global-padding">
 		<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ): the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -14,7 +14,7 @@
 
 <?php if ( is_single() ): ?>
 	<?php if ( get_the_author_meta( 'description' ) ): ?>
-		<div class="content">
+		<div class="content has-global-padding">
 			<div class="author-bio">
 				<div class="author-title-wrapper">
 					<div class="author-avatar vcard">
@@ -41,7 +41,7 @@
 	<?php endif; ?>
 
 	<nav class="page-navigation">
-		<div class="content">
+		<div class="content has-global-padding">
 			<?php
 				the_post_navigation( array(
 					'prev_text' => '&lsaquo;&nbsp;%title',
@@ -52,11 +52,11 @@
 	</nav>
 
 	<?php if ( comments_open() || get_comments_number() ): ?>
-		<div class="content">
+		<div class="content has-global-padding">
 			<?php comments_template(); ?>
 		</div>
 
-		<div class="content">
+		<div class="content has-global-padding">
 			<nav class="page-navigation">
 				<?php
 					the_post_navigation( array(
@@ -69,7 +69,7 @@
 	<?php endif; ?>
 <?php else: ?>
 	<nav class="page-navigation">
-		<div class="nav-links content">
+		<div class="nav-links content has-global-padding">
 			<div class="nav-previous"><?php previous_posts_link( '&lsaquo;&nbsp;Previous Page' ); ?></div>
 			<div class="nav-next"><?php next_posts_link( 'Next Page&nbsp;&rsaquo;' ); ?></div>
 		</div>

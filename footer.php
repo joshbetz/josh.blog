@@ -1,5 +1,5 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="content">
+		<div class="content has-global-padding">
 			<?php if ( has_nav_menu( 'main' ) || has_nav_menu( 'social' ) ): ?>
 				<div class="footer-menus">
 					<?php if ( has_nav_menu( 'main' ) ) : ?>
