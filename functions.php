@@ -51,6 +51,10 @@ add_action( 'after_setup_theme', function() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+	// Match the editor canvas to the front-end typography.
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'editor-style.css' );
+
 	// Add support for Block Styles.
 	add_theme_support( 'wp-block-styles' );
 

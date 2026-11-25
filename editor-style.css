@@ -1,0 +1,115 @@
+/* Loaded only in the editor; rem values on the front end use a 10px root. */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('fonts/montserrat-v18-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url('fonts/montserrat-v18-latin-italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('fonts/montserrat-v18-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: italic;
+	font-weight: 600;
+	font-display: swap;
+	src: url('fonts/montserrat-v18-latin-600italic.woff2') format('woff2');
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: clamp(16px, 2.5vw, 20px);
+	line-height: 1.6;
+	color: #222;
+	background: #fff;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Account for the front-end content column's 20px padding on either side. */
+.is-root-container > .wp-block,
+.editor-post-title__block {
+	max-width: calc(60ch - 40px);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.is-root-container > .wp-block[data-align="wide"] {
+	max-width: calc(78ch - 52px);
+}
+
+.is-root-container > .wp-block[data-align="full"] {
+	max-width: none;
+}
+
+p {
+	margin: 1em 0;
+}
+
+h1, h2, h3,
+h4, h5, h6,
+.editor-post-title__input {
+	font-family: inherit;
+	margin: 1em 0 0.25em;
+	line-height: 1.4;
+	font-weight: 600;
+	word-wrap: break-word;
+}
+
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.15em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.9em; }
+h6 { font-size: 0.75em; }
+
+.editor-post-title__input {
+	font-size: 1.5em;
+	margin-bottom: 0.1em;
+}
+
+a { color: #CA4246; }
+a:hover, a:focus-visible { color: #256EFF; }
+
+li { padding: 5px 0; }
+
+blockquote, .wp-block-quote {
+	border-left: 3px solid #CA4246;
+	background: rgba(0, 0, 0, 0.03);
+	padding: 1px 15px;
+	border-radius: 3px;
+}
+
+blockquote cite {
+	display: block;
+	margin-top: 10px;
+}
+
+code {
+	padding: 2px 3px;
+	background: #E9E9E9;
+	border-radius: 3px;
+	font-size: 0.9em;
+}
+
+pre { font-size: 0.9em; }
+pre code { background: none; }
+
+.wp-block-image figcaption {
+	font-weight: bold;
+	color: #222;
+}

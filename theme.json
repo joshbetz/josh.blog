@@ -8,7 +8,7 @@
   },
   "styles": {
     "typography": {
-      "fontFamily": "Montserrat, Verdana, sans-serif",
+      "fontFamily": "Montserrat, Verdana, sans-serif"
     },
     "blocks": {
       "core/code": {
