@@ -2,8 +2,8 @@
   "version": 2,
   "settings": {
     "layout": {
-      "contentSize": "calc(60ch - 40px)",
-      "wideSize": "calc(78ch - 52px)"
+      "contentSize": "800px",
+      "wideSize": "1200px"
     },
     "useRootPaddingAwareAlignments": true
   },
